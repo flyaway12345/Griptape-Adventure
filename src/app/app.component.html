@@ -89,9 +89,7 @@
               <h1 style="text-align: right;font-family: 'Century Gothic';font-size: calc(30% + 1vw + 1vh);margin-top: 9px;">&nbsp;</h1>
           </div>
           <div class="colright">
-            <a href="javascript:SwapDivsWithClick('MP3','MP4')">
                 <img class="narrowImg" src="../assests/next_black.png"  role="button" href="#" (click)="onClickMP4()">
-            </a>
         </div>
       </div>
   </div>
@@ -117,13 +115,8 @@
                       <h1 style="font-family: 'Century Gothic';color: rgb(255,255,255);text-align: center;font-size: calc(50% + 1vw + 1vh);">
                         You notice a glimmer to the key.<br>You feel it hum in your hands.<br>“Why??”<br><br>
                     </h1>
-                    <a id="narrow" class="d-flex align-items-center"
-                     role="button" style="background: url('assets/img/next_white.png')
-                      center / contain no-repeat;height: 6vh;width: 6vh;border-style: none;margin-left: 45%;"
-                       href="javascript:SwapDivsWithClick('MP4','MP4D1')"
-                        alt="..."></a>
-
-
+                    <button class="d-flex align-items-center" type="submit" name="register" id="D1" class="d-flex align-items-center" 
+                    (click)="onClickMP4D1()"></button>
                   </div>
               </div>
               <div class="col d-flex justify-content-center align-items-center align-self-center" style="width: 2%;height: 23px;">
@@ -136,12 +129,8 @@
                       <h1 class="text-center" style="font-family: 'Century Gothic';color: rgb(0,0,0);text-align: center;font-size: calc(50% + 1vw + 1vh);">
                         A voice in your head says,<br>“This key is important.<br>Something tells me it must be dealt with immediately…”<br><br>
                       </h1>
-                      <a id="narrow" class="d-flex align-items-center"
-                      role="button"
-                      style="background: url('../assests/next_black.png') center / contain no-repeat;height: 6vh;width: 6vh;border-style: none;margin-left: 45%;"
-                      href="javascript:SwapDivsWithClick('MP4','MP4L1')">
-
-                      </a>
+                      <button class="d-flex align-items-center" type="submit" name="register" id="D2" class="d-flex align-items-center"
+                       (click)="onClickMP4D2()"></button>
 
 
                   </div>
@@ -164,7 +153,7 @@
   </div>
     <!-- PAge 2 -->
   <div id="MP4D1" *ngIf="MP4D1 == true">
-      <div class="d-flex justify-content-center align-items-center" style="height: calc(55vh + 14vw);">
+      <div class="d-flex justify-content-center align-items-center"  style="background: #000000;height: 50vh;">
           <h1 id="comicfont-3" style="font-family: 'Lint McCree BB';text-align: center;font-size: calc(30% + 1vw + 1vh);color: rgb(255,255,255);">To the average person,<br>The key you hold looks ordinary.<br>Something to ignore.<br>But.<br>You’re not average.<br>And.<br>It’s not ordinary.<br></h1>
       </div>
       <div id="arrow-3" class="rownav">
@@ -173,7 +162,8 @@
           </div>
           <div class="colright">
 
-                <img class="narrowImg" src="../assests/next_black.png"  role="button" href="#" alt="..."/>
+            <button class="d-flex align-items-center" type="submit" name="register" id="D2" class="d-flex align-items-center"
+            (click)="onClickMP4D3()"></button>
 
           </div>
       </div>
@@ -187,9 +177,8 @@
               <h1 style="text-align: right;font-family: 'Century Gothic';font-size: calc(30% + 1vw + 1vh);margin-top: 9px;">&nbsp;</h1>
           </div>
           <div class="colright">
-            <a href="javascript:SwapDivsWithClick('MP4D2','MP4D3')">
+
                 <img class="narrowImg" src="../assests/next_black.png"  role="button" href="#" alt="...">
-            </a>
         </div>
       </div>
   </div>

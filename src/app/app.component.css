@@ -20,3 +20,16 @@
     display: none;
     height: 100vh;
 }
+#D1 {
+    background: url('../assests/next_white.png') center / contain no-repeat;
+    height: 6vh;width: 6vh;
+    border-style: none;
+    margin-left: 45%;
+}
+#D2 {
+    background: url('../assests/next_black.png') center / contain no-repeat;
+    height: 6vh;
+    width: 6vh;
+    border-style: none;
+    margin-left: 45%;
+}
