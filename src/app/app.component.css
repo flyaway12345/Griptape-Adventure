@@ -1,0 +1,22 @@
+#landingPage{
+    margin-top: 20vh;
+}
+
+#narrow {
+    background: url('../assests/next_black.png') center / contain no-repeat;
+    height: 3rem;
+    width: 3rem;
+    border-style: none;
+    margin-left: 3vh;
+    
+}
+.narrowImg {
+    background: url('../assests/next_black.png') center / contain no-repeat;
+    border-style: none;
+    width: calc(3vh + 3vw);
+}
+#MP4D1,#MP4D2,#MP4D3,#MP4D4,#MP4D4P1,#MP4D4P2,#MP4D4P3,#MP4D4P4{
+    background: #000000;
+    display: none;
+    height: 100vh;
+}
