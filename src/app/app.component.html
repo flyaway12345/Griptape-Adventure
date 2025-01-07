@@ -24,18 +24,16 @@
       <div class="row">
           <div class="col-md-12">
               <div class="d-flex justify-content-center">
-                  <form method="post" action="register.php" id="register_form" class="d-flex">
                     <div>
                       <div class="container">
                         <div class="d-table-cell w-100">
                           <input type="text" name="username" placeholder="Enter Key No." style="font-family: 'Lint McCree BB';transform: rotate(-10deg);width: 10rem;height:3rem; border-radius: 10px;text-align: center;border: 2px solid rgb(0,0,0);--bs-primary-rgb: 0,0,0;--bs-secondary-rgb: 0,0,0;">
                         </div>
                         <div class="d-table-cell align-middle">
-                          <button type="submit" name="register" id="narrow" class="d-flex align-items-center"></button>
+                          <button type="submit" name="register" id="narrow" class="d-flex align-items-center" (click)="onClickMP1()"></button>
                         </div>
                       </div>
                     </div>
-                  </form>
               </div>
           </div>
       </div>
@@ -60,7 +58,7 @@
               <h1 style="text-align: right;font-family: 'Century Gothic';font-size: calc(30% + 1vw + 1vh);margin-top: 9px;">&nbsp;</h1>
           </div>
           <div class="colright">
-            <img class="narrowImg" src="../assests/next_black.png"  role="button" href="#">
+            <img class="narrowImg" src="../assests/next_black.png"  role="button" href="#" (click)="onClickMP2()">
           </div>
       </div>
   </div>
@@ -76,11 +74,13 @@
           </div>
           <div class="colright">
             <a href="#">
-                <img class="narrowImg" src="../assests/next_black.png"  role="button" href="#">
+                <img class="narrowImg" src="../assests/next_black.png"  role="button" href="#" (click)="onClickMP3()">
             </a>
           </div>
       </div>
-  </div><div id="MP3" *ngIf="MP3 == true">
+  </div>
+    <!-- PAge 3 -->
+  <div id="MP3" *ngIf="MP3 == true">
       <div class="d-flex justify-content-center align-items-center" style="height: calc(55vh + 14vw);">
           <h1 id="comicfont-2" style="font-family: 'Lint McCree BB';text-align: center;font-size: calc(30% + 1vw + 1vh);color: rgb(33, 37, 41);">You made a choice.<br>And.<br>That choice is the true reason you are here.<br>It is why you are special.<br>It is why you received a key.<br></h1>
       </div>
@@ -90,11 +90,12 @@
           </div>
           <div class="colright">
             <a href="javascript:SwapDivsWithClick('MP3','MP4')">
-                <img class="narrowImg" src="../assests/next_black.png"  role="button" href="#">
+                <img class="narrowImg" src="../assests/next_black.png"  role="button" href="#" (click)="onClickMP4()">
             </a>
         </div>
       </div>
   </div>
+    <!-- PAge 4 -->
   <div id="MP4" *ngIf="MP4 == true">
       <div class="container-fluid d-none d-sm-none d-md-block" style="margin-left: 0px;">
           <div class="row">
@@ -161,6 +162,7 @@
           </div>
       </div>
   </div>
+    <!-- PAge 2 -->
   <div id="MP4D1" *ngIf="MP4D1 == true">
       <div class="d-flex justify-content-center align-items-center" style="height: calc(55vh + 14vw);">
           <h1 id="comicfont-3" style="font-family: 'Lint McCree BB';text-align: center;font-size: calc(30% + 1vw + 1vh);color: rgb(255,255,255);">To the average person,<br>The key you hold looks ordinary.<br>Something to ignore.<br>But.<br>You’re not average.<br>And.<br>It’s not ordinary.<br></h1>
