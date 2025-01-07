@@ -13,11 +13,14 @@
 .narrowImg {
     background: url('../assests/next_black.png') center / contain no-repeat;
     border-style: none;
-    width: calc(3vh + 3vw);
+    width: calc(30vh + 30vw);
+}
+#orBox{
+    width: calc(10% + 6vw + 2vh);
+    margin-left: calc(10% - 4.5vw - 1vh);
 }
 #MP4D1,#MP4D2,#MP4D3,#MP4D4,#MP4D4P1,#MP4D4P2,#MP4D4P3,#MP4D4P4{
     background: #000000;
-    display: none;
     height: 100vh;
 }
 #D1 {
