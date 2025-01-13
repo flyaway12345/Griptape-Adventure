@@ -13,6 +13,9 @@ export class AppComponent {
   title = 'griptape-adventure';
   ///fix all this spegetti code later, just get the functionallity working
   landingPage:boolean = true;
+  checkGuestOrMaster:string = "";
+  masterCode:string = "master";
+  guestCode:string = "guest";
   MP1:boolean = false;
   MP2:boolean = false;
   MP3:boolean = false;
