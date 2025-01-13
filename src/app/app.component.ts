@@ -1,11 +1,12 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, CommonModule],
+  imports: [RouterOutlet, CommonModule, FormsModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
@@ -13,7 +14,8 @@ export class AppComponent {
   title = 'griptape-adventure';
   ///fix all this spegetti code later, just get the functionallity working
   landingPage:boolean = true;
-  checkGuestOrMaster:string = "";
+  @Input() checkGuestOrMaster:string = "";
+  pathSelect:string = "";
   masterCode:string = "master";
   guestCode:string = "guest";
   MP1:boolean = false;
@@ -32,6 +34,19 @@ export class AppComponent {
   MP4L2:boolean = false;
   MP4L3:boolean = false;
   lastPage:boolean = false;
+
+choosePath(){
+  if(this.checkGuestOrMaster == this.masterCode){
+    this.pathSelect = "M";
+    this.onClickMP1();
+  }else if(this.checkGuestOrMaster == this.guestCode){
+    this.pathSelect = "G";
+    this.onClickMP1();
+  }else{
+    this.pathSelect = "";
+  }
+}
+
 onClickLandingPage(){
   this.landingPage = true;
   this.MP1 = false;

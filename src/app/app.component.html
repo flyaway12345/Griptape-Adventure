@@ -28,11 +28,13 @@
                     <div>
                       <div class="container">
                         <div class="d-table-cell w-100">
-                          <input type="text" name="username" placeholder="Enter Key No." style="font-family: 'Lint McCree BB';transform: rotate(-10deg);width: 10rem;height:3rem; border-radius: 10px;text-align: center;border: 2px solid rgb(0,0,0);--bs-primary-rgb: 0,0,0;--bs-secondary-rgb: 0,0,0;">
+                          <input type="text" name="username" placeholder="Enter Key No."
+                           style="font-family: 'Lint McCree BB';transform: rotate(-10deg);width: 10rem;height:3rem; border-radius: 10px;text-align: center;border: 2px solid rgb(0,0,0);--bs-primary-rgb: 0,0,0;--bs-secondary-rgb: 0,0,0;"
+                           [(ngModel)]="checkGuestOrMaster">
                         </div>
                         <div class="d-table-cell align-middle">
                             <button class="narrowImg"
-                            id="D2" src="../assests/next_black.png"  role="button" (click)="onClickMP1()"></button>
+                            id="D2" src="../assests/next_black.png"  role="button" (click)="choosePath()"></button>
                         </div>
                       </div>
                     </div>
@@ -49,7 +51,7 @@
 
 
 <!-- Master Path -->
-<div>
+<div *ngIf="pathSelect == 'M'">
     <!-- Page 1 -->
     <div id="MP1" *ngIf="MP1 == true">
         <div class="d-flex justify-content-center align-items-center" style="height: calc(55vh + 14vw);">
@@ -529,7 +531,7 @@
     </div>
 
 <!-- Guest Path -->
-<div>
+<div *ngIf="pathSelect == 'G'">
     <!-- Page 1 -->
     <div id="MP1" *ngIf="MP1 == true">
         <div class="d-flex justify-content-center align-items-center" style="height: calc(55vh + 14vw);">
