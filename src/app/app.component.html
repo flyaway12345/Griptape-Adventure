@@ -46,7 +46,7 @@
 <div *ngIf="landingPage == true" class="d-flex justify-content-end" id="footer" style="margin-top: 20%;">
   <a href="contact.html" style="margin-right: 5%;color: rgba(13,110,253,0);">
       <h1 id="help" style="font-family: 'Lint McCree BB';font-size: 1rem;text-align: right;margin-right: 5%;width: 18rem;color: rgb(0,0,0);">
-        <a href="https://www.griptape.org/contact-us" style="color: black;">
+        <a href="https://www.griptape.org/contact-us" style="color: blaCK;">
         Help! My key isn’t working!
     </a>
     </h1>
@@ -57,18 +57,20 @@
 <div *ngIf="pathSelect == 'M'">
     <!-- Page 1 -->
     <div id="MP1" *ngIf="MP1 == true">
-        <div class="d-flex justify-content-center align-items-center" style="height: calc(55vh + 14vw);">
-            <h1 id="comicfont-1" style="font-family: 'Lint McCree BB';text-align: center;font-size: calc(30% + 1vw + 1vh);">
-                A key led you here.<br>But.<br>The wheels were set in motion long before that.<br>They started to turn at a time in your past.<br>A moment when you made a decision.<br>
-    
-              </h1>
+        <div class="d-flex flex-fill justify-content-center align-items-center" style="height: 50vh;">
+            <div id="tlay-1" style="width: 90%;">
+                <h1 style="font-family: 'Century Gothic';text-align: center;font-size: calc(50% + 1vw + 1vh);">
+                    A key led you here.<br>But.<br>The wheels were set in motion long before that.<br>They started to turn at a time in your past.<br>A moment when you made a decision.<br>
+                </h1>
+                <button class="narrowImg" id="D2" src="../assests/next_black.png"  role="button" (click)="onClickMP2()"></button>
+            </div>
         </div>
         <div id="arrow-1" class="rownav">
             <div class="colleft">
                 <h1 style="text-align: right;font-family: 'Century Gothic';font-size: calc(30% + 1vw + 1vh);margin-top: 9px;">&nbsp;</h1>
             </div>
             <div class="colright">
-              <button class="narrowImg" id="D2" src="../assests/next_black.png"  role="button" (click)="onClickMP2()"></button>
+              
             </div>
         </div>
     </div>
@@ -166,7 +168,14 @@
     <div id="MP4D1" *ngIf="MP4D1 == true">
         <div class="d-flex justify-content-center align-items-center"  >
             <h1 id="comicfont-3" style="font-family: 'Lint McCree BB';text-align: center;font-size: calc(30% + 1vw + 1vh);color: rgb(255,255,255);">
-              To the average person,<br>The key you hold looks ordinary.<br>Something to ignore.<br>But.<br>You’re not average.<br>And.<br>It’s not ordinary.<br></h1>
+              To the average person,
+              <br>The key you hold looks ordinary.
+              <br>Something to ignore.
+              <br>But.
+              <br>You’re not average.
+              <br>And.
+              <br>It’s not ordinary.
+              <br></h1>
         </div>
         <div id="arrow-3" class="rownav">
             <div class="colleft">
@@ -197,7 +206,11 @@
     <div id="MP4D3" *ngIf="MP4D3 == true">
         <div class="d-flex justify-content-center align-items-center" style="height: calc(55vh + 14vw);">
             <h1 id="comicfont-5" style="font-family: 'Lint McCree BB';text-align: center;font-size: calc(30% + 1vw + 1vh);color: rgb(255,255,255);">
-              With the key active and in your possession,<br>You gain the power to determine the future.<br>You gain access to the powerful secrets of The Waiting Place.<br>The opportunity to enter.<br>And.<br>The ability to choose how:<br>Alone.<br>Or.<br>With others.<br></h1>
+              With the key active and in your possession,
+              <br>You gain the power to determine the future.
+              <br>The opportunity to enter The Waiting Place.
+              <br>To learn its powerful secrets.
+            </h1>
         </div>
         <div id="arrow-5" class="rownav">
             <div class="colleft">
@@ -279,7 +292,19 @@
     <div id="MP4D4P2" *ngIf="MP4D4P2 == true">
         <div class="d-flex justify-content-center align-items-center" style="height: calc(55vh + 14vw);background: #000000;">
             <h1 id="comicfont-7" style="font-family: 'Lint McCree BB';text-align: center;font-size: calc(30% + 1vw + 1vh);color: rgb(255,255,255);">
-              The power of the master key cannot be hoarded.<br>The key will not wait.<br>Its life is bound to something greater.<br>You have 72 hours to make your choice.<br>To exercise the full magnitude of the key’s power.<br></h1>
+              The power of the master key cannot be hoarded.
+              <br>It’s bound to others,
+              <br>And to something greater.
+              <br>
+              <br>You were invited by someone,
+              <br>Who considers you trustworthy.
+              <br>
+              <br>But the key must be shared.
+              <br>There is a number that must accept.
+              <br>Or.
+              <br>The Key may move on.
+              <br>You have 72 hours to act
+              <br></h1>
         </div>
         <div id="arrow-7" class="rownav" style="background: #000000;">
             <div class="colleft">
@@ -293,7 +318,17 @@
     <div id="MP4D4P3" *ngIf="MP4D4P3 == true">
         <div class="d-flex justify-content-center align-items-center" style="height: calc(55vh + 14vw);">
             <h1 id="comicfont-8" style="font-family: 'Lint McCree BB';text-align: center;font-size: calc(30% + 1vw + 1vh);color: rgb(255,255,255);">
-              Should you avoid making the decision.<br>The key’s power may fade.<br>Until.<br>It is completely gone.<br><br>Its life may pass.<br>Into a key in someone else’s hands.<br>Someone else in your community.<br>Who may or may not<br>Invite you.<br></h1>
+              Should you avoid making the decision.
+              <br>The key’s power may fade.
+              <br>Until.
+              <br>It is completely gone.
+              <br>
+              <br>Its life may pass.
+              <br>Go to someone else’s hands.
+              <br>Someone else in your community.
+              <br>Who may or may not
+              <br>Invite you.
+              <br></h1>
         </div>
         <div id="arrow-8" class="rownav">
             <div class="colleft">
@@ -301,24 +336,9 @@
             </div>
             <div class="colright">
               <a href="javascript:SwapDivsWithClick('MP4D4P3','MP4D4P4')">
-                  <button class="narrowImg" id="D1" src="../assests/next_white.png"  role="button" (click)="onClickMP4D4P4()" alt="..." ></button>
+                  <button class="narrowImg" id="D1" src="../assests/next_white.png"  role="button" (click)="onClickLandingPage()" alt="..." ></button>
               </a>
             </div>
-        </div>
-    </div>
-    <div id="MP4D4P4" *ngIf="MP4D4P4 == true">
-        <div class="d-flex justify-content-center align-items-center" style="height: calc(55vh + 14vw);">
-            <h1 id="comicfont-9" style="font-family: 'Lint McCree BB';text-align: center;font-size: calc(30% + 1vw + 1vh);color: rgb(255,255,255);">
-              The key is destined to find its match.<br>The one with The Eye.<br></h1>
-        </div>
-        <div id="arrow-9" class="rownav">
-            <div class="colleft">
-                <h1 style="text-align: right;font-family: 'Century Gothic';font-size: calc(30% + 1vw + 1vh);margin-top: 9px;color: rgb(255,255,255);margin-right: 5px;">
-                  “Got it. But you’re going to have to tell me: What is The Waiting Place?”&nbsp;</h1>
-            </div>
-            <div class="colright">
-              <button class="narrowImg" id="D1" src="../assests/next_white.png"  role="button" (click)="onClicklastPage()" alt="..." ></button>
-          </div>
         </div>
     </div>
     <div id="MP4L1" *ngIf="MP4L1 == true">
@@ -339,7 +359,14 @@
     <div id="MP4L2" *ngIf="MP4L2 == true">
         <div class="d-flex justify-content-center align-items-center" style="height: calc(55vh + 14vw);">
             <h1 id="comicfont-11" style="font-family: 'Lint McCree BB';text-align: center;font-size: calc(30% + 1vw + 1vh);color: rgb(33,37,41);">
-              You have 72 hours to make a decision.<br>Continue alone.<br>Or.<br>With others.<br><br>Should you avoid making a choice.<br>The key may pass to someone else in your community.<br>Someone who may or may not invite you.<br></h1>
+                You have 72 hours to act. 
+              <br>And your Key is bound to others.
+              <br>To those chosen by you, the Master Key holder.
+              <br>
+              <br>You were deemed trustworthy.
+              <br>Ready for this key
+              <br>Now you must ready your crew
+              <br></h1>
         </div>
         <div id="arrow-11" class="rownav">
             <div class="colleft">
