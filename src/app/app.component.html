@@ -573,18 +573,22 @@
 <div *ngIf="pathSelect == 'G'">
     <!-- Page 1 -->
     <div id="MP1" *ngIf="MP1 == true">
-        <div class="d-flex justify-content-center align-items-center" style="height: calc(55vh + 14vw);">
-            <h1 id="comicfont-1" style="font-family: 'Comic Sans MS';text-align: center;font-size: calc(30% + 1vw + 1vh);">
-                A key led you here.<br>But.<br>The wheels were set in motion long before that.<br>They started to turn at a time in your past.<br>A moment when you made a decision.<br>
-    
-              </h1>
+        <div class="d-flex justify-content-center align-items-center" style="height: 50vh;">
+            <div id="tlay-1" style="width: 90%;">
+                <h1 id="comicfont" style="font-family: 'Comic Sans MS';text-align: center;font-size: calc(30% + 1vw + 1vh);">
+                    A key led you here.
+                    <br>But.
+                    <br>The wheels were set in motion long before that.<br>They started to turn at a time in your past.<br>A moment when you made a decision.<br>
+                </h1>
+                <button class="narrowImg" id="D2" src="../assests/next_black.png"  role="button" (click)="onClickMP2()"></button>
+            </div>
         </div>
         <div id="arrow-1" class="rownav">
             <div class="colleft">
                 <h1 style="text-align: right;font-family: 'Century Gothic';font-size: calc(30% + 1vw + 1vh);margin-top: 9px;">&nbsp;</h1>
             </div>
             <div class="colright">
-              <button class="narrowImg" id="D2" src="../assests/next_black.png"  role="button" (click)="onClickMP2()"></button>
+              
             </div>
         </div>
     </div>
@@ -592,32 +596,37 @@
     <!-- PAge 2 -->
     <div *ngIf="MP2 == true" id="MP2">
         <div class="d-flex justify-content-center align-items-center" style="height: calc(55vh + 14vw);">
+            <div id="tlay-1" style="width: 90%;">
             <h1 id="comicfont" style="font-family: 'Comic Sans MS';text-align: center;font-size: calc(30% + 1vw + 1vh);">
               Though you may not have realized it then,<br>You faced a fork in the road.<br>One path was easy.<br>The other unclear.<br>
             </h1>
+            <button class="narrowImg" id="D2" src="../assests/next_black.png"  role="button" (click)="onClickMP3()"></button>
+        </div>
         </div>
         <div id="arrow" class="rownav">
             <div class="colleft">
                 <h1 style="text-align: right;font-family: 'Century Gothic';font-size: calc(30% + 1vw + 1vh);margin-top: 9px;">&nbsp;</h1>
             </div>
             <div class="colright">
-                  <button class="narrowImg" id="D2" src="../assests/next_black.png"  role="button" (click)="onClickMP3()"></button>
+                  
             </div>
         </div>
     </div>
       <!-- PAge 3 -->
     <div id="MP3" *ngIf="MP3 == true">
         <div class="d-flex justify-content-center align-items-center" style="height: calc(55vh + 14vw);">
+            <div id="tlay-1" style="width: 90%;">
             <h1 id="comicfont-2" style="font-family: 'Comic Sans MS';text-align: center;font-size: calc(30% + 1vw + 1vh);color: rgb(33, 37, 41);">
               You made a choice.<br>And.<br>That choice is the true reason you are here.<br>It is why you are special.<br>It is why you received a key.<br></h1>
-    
+              <button class="narrowImg" id="D2" src="../assests/next_black.png"  role="button" (click)="onClickMP4()"></button>
+            </div>
             </div>
         <div id="arrow-2" class="rownav">
             <div class="colleft">
                 <h1 style="text-align: right;font-family: 'Century Gothic';font-size: calc(30% + 1vw + 1vh);margin-top: 9px;">&nbsp;</h1>
             </div>
             <div class="colright">
-                  <button class="narrowImg" id="D2" src="../assests/next_black.png"  role="button" (click)="onClickMP4()"></button>
+
           </div>
         </div>
     </div>
@@ -680,17 +689,28 @@
     </div>
       <!-- PAge 2 -->
     <div id="MP4D1" *ngIf="MP4D1 == true">
-        <div class="d-flex justify-content-center align-items-center"  >
+        <div class="d-flex justify-content-center align-items-center"  style="height: calc(55vh + 14vw);">
+            <div id="tlay-1" style="width: 90%;">
             <h1 id="comicfont-3" style="font-family: 'Comic Sans MS';text-align: center;font-size: calc(30% + 1vw + 1vh);color: rgb(255,255,255);">
-              To the average person,<br>The key you hold looks ordinary.<br>Something to ignore.<br>But.<br>You’re not average.<br>And.<br>It’s not ordinary.<br></h1>
+              To the average person,
+              <br>The key you hold looks ordinary.
+              <br>Something to ignore.
+              <br>But.
+              <br>You’re not average.
+              <br>And.
+              <br>It’s not ordinary.
+              <br>
+            </h1>
+            <button class="narrowImg" id="D1" src="../assests/next_white.png"  (click)="onClickMP4D2()" alt="..." ></button>
         </div>
+    </div>
         <div id="arrow-3" class="rownav">
             <div class="colleft">
                 <h1 style="text-align: right;font-family: 'Century Gothic';font-size: calc(30% + 1vw + 1vh);margin-top: 9px;">&nbsp;</h1>
             </div>
             <div class="colright">
     
-              <button class="narrowImg" id="D1" src="../assests/next_white.png"  (click)="onClickMP4D2()" alt="..." ></button>
+
     
             </div>
         </div>
@@ -698,7 +718,10 @@
     <div id="MP4D2" *ngIf="MP4D2 == true">
         <div class="d-flex justify-content-center align-items-center" style="height: calc(55vh + 14vw);">
             <h1 id="comicfont-4" style="font-family: 'Comic Sans MS';text-align: center;font-size: calc(30% + 1vw + 1vh);color: rgb(255,255,255);">
-                The key only comes alive,<br>In the hands of someone with a unique Eye.<br>Someone with Vision.<br></h1>
+                The key only comes alive,
+                <br>In the hands of someone with a unique Eye.
+                <br>Someone with Vision.
+                <br></h1>
         </div>
         <div id="arrow-4" class="rownav">
             <div class="colleft">
@@ -713,8 +736,11 @@
     <div id="MP4D3" *ngIf="MP4D3 == true">
         <div class="d-flex justify-content-center align-items-center" style="height: calc(55vh + 14vw);">
             <h1 id="comicfont-5" style="font-family: 'Comic Sans MS';text-align: center;font-size: calc(30% + 1vw + 1vh);color: rgb(255,255,255);">
-              With the key active and in your possession,<br>You gain the power to determine the future.<br>The opportunity to enter The Waiting Place.<br>To learn its powerful secrets.
-              <br></h1>
+              With the key active and in your possession,
+              <br>You gain the power to determine the future.
+              <br>The opportunity to enter The Waiting Place.
+              <br>To learn its powerful secrets.
+            </h1>
         </div>
         <div id="arrow-5" class="rownav">
             <div class="colleft">
@@ -796,10 +822,10 @@
     <div id="MP4D4P2" *ngIf="MP4D4P2 == true">
         <div class="d-flex justify-content-center align-items-center" style="height: calc(55vh + 14vw);background: #000000;">
             <h1 id="comicfont-7" style="font-family: 'Comic Sans MS';text-align: center;font-size: calc(30% + 1vw + 1vh);color: rgb(255,255,255);">
-                The power of the key cannot be hoarded.
-                <br>It’s bound to others,
-                <br>And to something greater.
-                <br></h1>
+              The power of the master key cannot be hoarded.
+              <br>It’s bound to others,
+              <br>And to something greater.
+              </h1>
         </div>
         <div id="arrow-7" class="rownav" style="background: #000000;">
             <div class="colleft">
@@ -824,7 +850,7 @@
               <br>There is a number that must accept.
               <br>Or.
               <br>The Keys may move on.
-              <br></h1>
+            </h1>
         </div>
         <div id="arrow-8" class="rownav">
             <div class="colleft">
@@ -832,24 +858,9 @@
             </div>
             <div class="colright">
               <a href="javascript:SwapDivsWithClick('MP4D4P3','MP4D4P4')">
-                  <button class="narrowImg" id="D1" src="../assests/next_white.png"  role="button" (click)="onClickMP4D4P4()" alt="..." ></button>
+                  <button class="narrowImg" id="D1" src="../assests/next_white.png"  role="button" (click)="onClickLandingPage()" alt="..." ></button>
               </a>
             </div>
-        </div>
-    </div>
-    <div id="MP4D4P4" *ngIf="MP4D4P4 == true">
-        <div class="d-flex justify-content-center align-items-center" style="height: calc(55vh + 14vw);">
-            <h1 id="comicfont-9" style="font-family: 'Comic Sans MS';text-align: center;font-size: calc(30% + 1vw + 1vh);color: rgb(255,255,255);">
-              The key is destined to find its match.<br>The one with The Eye.<br></h1>
-        </div>
-        <div id="arrow-9" class="rownav">
-            <div class="colleft">
-                <h1 style="text-align: right;font-family: 'Century Gothic';font-size: calc(30% + 1vw + 1vh);margin-top: 9px;color: rgb(255,255,255);margin-right: 5px;">
-                  “Got it. But you’re going to have to tell me: What is The Waiting Place?”&nbsp;</h1>
-            </div>
-            <div class="colright">
-              <button class="narrowImg" id="D1" src="../assests/next_white.png"  role="button" (click)="onClicklastPage()" alt="..." ></button>
-          </div>
         </div>
     </div>
     <div id="MP4L1" *ngIf="MP4L1 == true">
@@ -857,8 +868,7 @@
             <h1 id="comicfont-10" style="font-family: 'Comic Sans MS';text-align: center;font-size: calc(30% + 1vw + 1vh);color: rgb(33,37,41);">
               This key is an invitation to The Waiting Place.
               <br>You were hand-selected.
-              <br>You are needed for what is to come.
-              <br></h1>
+              <br>You are needed for what is to come.<br></h1>
         </div>
         <div id="arrow-10" class="rownav">
             <div class="colleft">
@@ -873,15 +883,15 @@
     <div id="MP4L2" *ngIf="MP4L2 == true">
         <div class="d-flex justify-content-center align-items-center" style="height: calc(55vh + 14vw);">
             <h1 id="comicfont-11" style="font-family: 'Comic Sans MS';text-align: center;font-size: calc(30% + 1vw + 1vh);color: rgb(33,37,41);">
-                Your key is bound to others.
-                <br>To those chosen by your Master Key holder.
-                <br>
-                <br>You were deemed trustworthy.
-                <br>If you decline.
-                <br>All your team’s invitations may be at risk.
-                <br>
-                <br>There is a number that must accept.
-                <br></h1>
+                Your Key is bound to others.
+              <br>To those chosen by you, the Master Key holder.
+              <br>
+              <br>You were deemed trustworthy.
+              <br>If you decline.
+              <br>All your team’s invitations may be at risk.
+              <br>
+              <br>There is a number that must accept.
+            </h1>
         </div>
         <div id="arrow-11" class="rownav">
             <div class="colleft">
