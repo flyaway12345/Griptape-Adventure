@@ -9,8 +9,7 @@
     width: 90%;
 }
 #orBox{
-    width: calc(10% + 6vw + 2vh);
-    margin-left: calc(10% - 4.5vw - 1vh);
+
 }
 #MP4D1,#MP4D2,#MP4D3,#MP4D4,#MP4D4P1,#MP4D4P2,#MP4D4P3,#MP4D4P4{
     background: #000000;
@@ -96,9 +95,10 @@
 .orBox {
     background: url('../assests/OrBox.png') center / contain no-repeat;
     border-style: none;
-    height: 15vh;
-    width:15vh;
-    display: none;
+    height: 203px;
+    width: calc(10% + 6vw + 2vh);
+    margin-left: calc(10% - 4.5vw - 1vh);
+    /* display: none; */
 }
 .SkinBlock {
     background: url('../assests/SkinBlock.png') center / contain no-repeat;
