@@ -93,6 +93,12 @@
     height: 100vh;
     width:100vh;
 }
+.OrBox {
+    background: url('../assests/OrBox.png') center / contain no-repeat;
+    border-style: none;
+    height: 100vh;
+    width:100vh;
+}
 .SkinBlock {
     background: url('../assests/SkinBlock.png') center / contain no-repeat;
     border-style: none;
@@ -101,6 +107,12 @@
 }
 .button {
     background: url('../assests/button.png') center / contain no-repeat;
+    border-style: none;
+    height: 100vh;
+    width:100vh;
+}
+#More {
+    background: url('../assests/More.png') center / contain no-repeat;
     border-style: none;
     height: 100vh;
     width:100vh;
