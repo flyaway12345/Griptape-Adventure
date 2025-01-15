@@ -1,0 +1,119 @@
+#landingPage{
+    margin-top: 20vh;
+}
+
+
+.narrowImg {
+    border-style: none;
+    width: calc(30vh + 30vw);
+    width: 90%;
+}
+#orBox{
+
+}
+#MP4D1,#MP4D2,#MP4D3,#MP4D4,#MP4D4P1,#MP4D4P2,#MP4D4P3,#MP4D4P4{
+    background: #000000;
+    height: 100vh;
+}
+#D1 {
+    background: url('../../assests/next_white.png') center / contain no-repeat;
+    height: 6vh;
+    width: 6vh;
+    border-style: none;
+    margin-left: 45%;
+}
+#D2 {
+    background: url('../../assests/next_black.png') center / contain no-repeat;
+    height: 6vh;
+    width: 6vh;
+    border-style: none;
+    margin-left: 45%;
+}
+
+.A1 {
+    background: url('../../assests/a1.png') center / contain no-repeat;
+    border-style: none;
+    height: 6vh;
+    width:6vh;
+}
+.A2 {
+    background: url('../../assests/a2.png') center / contain no-repeat;
+    border-style: none;
+    height: 6vh;
+    width:6vh;
+}
+
+.Block1 {
+    background: url('../../assests/Block1.png') center / contain no-repeat;
+    border-style: none;
+    height: 100vh;
+    width:100vh;
+}
+.Block2 {
+    background: url('../../assests/Block2.png') center / contain no-repeat;
+    border-style: none;
+    height: 100vh;
+    width:100vh;
+}
+.Block3 {
+    background: url('../../assests/Block3.png') center / contain no-repeat;
+    border-style: none;
+    height: 100vh;
+    width:100vh;
+}
+.Block4 {
+    background: url('../../assests/Block4.png') center / contain no-repeat;
+    border-style: none;
+    height: 100vh;
+    width:100vh;
+}
+.GuestBlock {
+    background: url('../../assests/GuestBlock.png') center / contain no-repeat;
+    border-style: none;
+    height: 100vh;
+    width:100vh;
+}
+.LocaBlock {
+    background: url('../../assests/LocaBlock.png') center / contain no-repeat;
+    border-style: none;
+    height: 100vh;
+    width:100vh;
+}
+.NextBlock {
+    background: url('../../assests/NextBlock.png') center / contain no-repeat;
+    border-style: none;
+    height: 100vh;
+    width:100vh;
+}
+.OrgBlok {
+    background: url('../../assests/OrgBlok.png') center / contain no-repeat;
+    border-style: none;
+    height: 100vh;
+    width:100vh;
+}
+.orBox {
+    background: url('../../assests/OrBox.png') center / contain no-repeat;
+    border-style: none;
+    height: 203px;
+    width: calc(10% + 6vw + 2vh);
+    margin-left: calc(10% - 4.5vw - 1vh);
+    /* display: none; */
+}
+.SkinBlock {
+    background: url('../../assests/SkinBlock.png') center / contain no-repeat;
+    border-style: none;
+    height: 100vh;
+    width:100vh;
+}
+.button {
+    background: url('../../assests/button.png') center / contain no-repeat;
+    border-style: none;
+    height: 100vh;
+    width:100vh;
+}
+#More {
+    background: url('../../assests/More.png') center / contain no-repeat;
+    border-style: none;
+    height: 100vh;
+    width:100vh;
+}
