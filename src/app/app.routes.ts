@@ -5,5 +5,6 @@ import { AppComponent } from './app.component';
 export const routes: Routes = [
     {path:'NYC', component:NycComponent},
     {path:'Nyc', component:NycComponent},
-    {path:'nyc', component:NycComponent}
+    {path:'nyc', component:NycComponent},
+    {path:'**', component:AppComponent}
 ];
