@@ -14,7 +14,7 @@ export class NycComponent {
   landingPage:boolean = true;
   @Input() checkGuestOrMaster:string = "";
   pathSelect:string = "";
-  masterCode:string = "fortitude";
+  masterCode:string = "chosen";
   guestCode:string = "trusted";
   MP1:boolean = false;
   MP2:boolean = false;
