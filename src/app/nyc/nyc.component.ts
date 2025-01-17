@@ -14,8 +14,8 @@ export class NycComponent {
   landingPage:boolean = true;
   @Input() checkGuestOrMaster:string = "";
   pathSelect:string = "";
-  masterCode:string = "master";
-  guestCode:string = "guest";
+  masterCode:string = "fortitude";
+  guestCode:string = "trusted";
   MP1:boolean = false;
   MP2:boolean = false;
   MP3:boolean = false;
@@ -34,10 +34,10 @@ export class NycComponent {
   lastPage:boolean = false;
 
 choosePath(){
-  if(this.checkGuestOrMaster == this.masterCode){
+  if(this.checkGuestOrMaster.toLowerCase() == this.masterCode){
     this.pathSelect = "M";
     this.onClickMP1();
-  }else if(this.checkGuestOrMaster == this.guestCode){
+  }else if(this.checkGuestOrMaster.toLowerCase() == this.guestCode){
     this.pathSelect = "G";
     this.onClickMP1();
   }else{
