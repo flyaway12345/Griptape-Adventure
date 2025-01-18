@@ -1,9 +1,11 @@
-import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { Component, Input } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-texas',
   standalone: true,
-  imports: [],
+  imports: [CommonModule, FormsModule],
   templateUrl: './texas.component.html',
   styleUrl: './texas.component.css'
 })
@@ -11,8 +13,8 @@ export class TexasComponent {
 landingPage:boolean = true;
   @Input() checkGuestOrMaster:string = "";
   pathSelect:string = "";
-  masterCode:string = "chosen";
-  guestCode:string = "trusted";
+  masterCode:string = "master";
+  guestCode:string = "guest";
   MP1:boolean = false;
   MP2:boolean = false;
   MP3:boolean = false;
