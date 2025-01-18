@@ -19,6 +19,9 @@ export class TexasComponent {
   helpLink:string = "https://himedia.gg";
   payLink:string = "https://himedia.gg";
 
+  allowInputOnLandingPage:boolean = true;
+
+
 landingPage:boolean = true;
   @Input() checkGuestOrMaster:string = "";
   pathSelect:string = "";

@@ -20,6 +20,9 @@ export class NycComponent {
   helpLink:string = "https://form.jotform.com/250158429285159";
   payLink:string = "https://form.jotform.com/250158429285159";
 
+  allowInputOnLandingPage:boolean = true;
+
+
   landingPage:boolean = true;
   @Input() checkGuestOrMaster:string = "";
   pathSelect:string = "";

@@ -14,13 +14,14 @@ export class LandingPageComponent {
   ///fix all this spegetti code later, just get the functionallity working
   eventDate:string ="tba";
   eventTime:string ="tba";
-  masterCode:string = "#";
+  masterCode:string = "master";
   masterButtonLink:string = "https://himedia.gg";
-  guestCode:string = "$";
+  guestCode:string = "guest";
   guestButtonLink:string = "https://himedia.gg";
   helpLink:string = "https://himedia.gg";
   payLink:string = "https://himedia.gg";
 
+  allowInputOnLandingPage:boolean = false;
 
   landingPage:boolean = true;
   @Input() checkGuestOrMaster:string = "";

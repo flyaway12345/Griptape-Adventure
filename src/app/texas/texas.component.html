@@ -22,7 +22,7 @@
                 </div>
             </div>
         </div>
-        <div class="row">
+        <div class="row" *ngIf=" allowInputOnLandingPage == true">
             <div class="col-md-12">
                 <div class="d-flex justify-content-center">
                       <div>
@@ -43,7 +43,7 @@
         </div>
     </div>
   </div>
-  <div *ngIf="landingPage == true" class="d-flex justify-content-end" id="footer" style="margin-top: 20%;">
+  <div *ngIf="landingPage == true &&  allowInputOnLandingPage == true" class="d-flex justify-content-end" id="footer" style="margin-top: 20%;">
     <a href="contact.html" style="margin-right: 5%;color: rgba(13,110,253,0);">
         <h1 id="help" style="font-family: 'Comic Sans MS';font-size: 1rem;text-align: right;margin-right: 5%;width: 18rem;color: rgb(0,0,0);">
           <a href="{{helpLink}}" style="color: blaCK;">
