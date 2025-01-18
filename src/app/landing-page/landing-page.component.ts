@@ -12,11 +12,15 @@ import { FormsModule } from '@angular/forms';
 export class LandingPageComponent {
   title = 'griptape-adventure';
   ///fix all this spegetti code later, just get the functionallity working
+  eventDate:string ="tba";
+  eventTime:string ="tba";
+  buttonLink:string = "https://himedia.gg";
+  masterCode:string = "master";
+  guestCode:string = "guest";
+
   landingPage:boolean = true;
   @Input() checkGuestOrMaster:string = "";
   pathSelect:string = "";
-  masterCode:string = "master";
-  guestCode:string = "guest";
   MP1:boolean = false;
   MP2:boolean = false;
   MP3:boolean = false;

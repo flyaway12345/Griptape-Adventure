@@ -11,11 +11,16 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './nyc.component.css'
 })
 export class NycComponent {
+  eventDate:string ="tba";
+  eventTime:string ="tba";
+  buttonLink:string = "#";
+  masterCode:string = "chosen";
+  guestCode:string = "trusted";
+   
   landingPage:boolean = true;
   @Input() checkGuestOrMaster:string = "";
   pathSelect:string = "";
-  masterCode:string = "chosen";
-  guestCode:string = "trusted";
+
   MP1:boolean = false;
   MP2:boolean = false;
   MP3:boolean = false;
