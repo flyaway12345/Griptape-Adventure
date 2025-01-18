@@ -1,7 +1,7 @@
 
 <!-- Landing Page -->
 
-<div id="landingPage">
+<div id="landingPage" *ngIf="landingPage == true">
     <div class="container">
         <div class="row">
             <div class="col text-center d-flex" style="width: 100%;">
@@ -30,11 +30,11 @@
                           <div class="d-table-cell w-100">
                             <input type="text" name="username" placeholder="Enter Key"
                              style="font-family: 'Comic Sans MS';transform: rotate(-10deg);width: 10rem;height:3rem; border-radius: 10px;text-align: center;border: 2px solid rgb(0,0,0);--bs-primary-rgb: 0,0,0;--bs-secondary-rgb: 0,0,0;"
-                             >
+                             [(ngModel)]="checkGuestOrMaster">
                           </div>
                           <div class="d-table-cell align-middle">
                               <button class="narrowImg"
-                              id="D2" role="button"></button>
+                              id="D2" role="button" (click)="choosePath()"></button>
                           </div>
                         </div>
                       </div>
@@ -43,1094 +43,1108 @@
         </div> -->
     </div>
   </div>
-   <!-- Master Path -->
-   <div *ngIf="pathSelect == 'M'">
-    <!-- Page 1 -->
-    <div id="MP1" *ngIf="MP1 == true">
-        <div class="d-flex justify-content-center align-items-center" style="height: 50vh;">
-            <div id="tlay-1" style="width: 90%;">
-                <h1 id="comicfont" style="font-family: 'Comic Sans MS';text-align: center;font-size: calc(30% + 1vw + 1vh);">
-                    A key led you here.<br>But.<br>The wheels were set in motion long before that.<br>They started to turn at a time in your past.<br>A moment when you made a decision.<br>
-                </h1>
-                <button class="narrowImg" id="D2" role="button" (click)="onClickMP2()"></button>
-            </div>
-        </div>
-        <div id="arrow-1" class="rownav">
-            <div class="colleft">
-                <h1 style="text-align: right;font-family: 'Century Gothic';font-size: calc(30% + 1vw + 1vh);margin-top: 9px;">&nbsp;</h1>
-            </div>
-            <div class="colright">
-              
-            </div>
-        </div>
-    </div>
-    
-    <!-- PAge 2 -->
-    <div *ngIf="MP2 == true" id="MP2">
-        <div class="d-flex justify-content-center align-items-center" style="height: calc(55vh + 14vw);">
-            <div id="tlay-1" style="width: 90%;">
-            <h1 id="comicfont" style="font-family: 'Comic Sans MS';text-align: center;font-size: calc(30% + 1vw + 1vh);">
-              Though you may not have realized it then,<br>You faced a fork in the road.<br>One path was easy.<br>The other unclear.<br>
-            </h1>
-            <button class="narrowImg" id="D2" role="button" (click)="onClickMP3()"></button>
-        </div>
-        </div>
-        <div id="arrow" class="rownav">
-            <div class="colleft">
-                <h1 style="text-align: right;font-family: 'Century Gothic';font-size: calc(30% + 1vw + 1vh);margin-top: 9px;">&nbsp;</h1>
-            </div>
-            <div class="colright">
-                  
-            </div>
-        </div>
-    </div>
-      <!-- PAge 3 -->
-    <div id="MP3" *ngIf="MP3 == true">
-        <div class="d-flex justify-content-center align-items-center" style="height: calc(55vh + 14vw);">
-            <div id="tlay-1" style="width: 90%;">
-            <h1 id="comicfont-2" style="font-family: 'Comic Sans MS';text-align: center;font-size: calc(30% + 1vw + 1vh);color: rgb(33, 37, 41);">
-              You made a choice.<br>And.<br>That choice is the true reason you are here.<br>It is why you are special.<br>It is why you received a key.<br></h1>
-              <button class="narrowImg" id="D2" role="button" (click)="onClickMP4()"></button>
-            </div>
-            </div>
-        <div id="arrow-2" class="rownav">
-            <div class="colleft">
-                <h1 style="text-align: right;font-family: 'Century Gothic';font-size: calc(30% + 1vw + 1vh);margin-top: 9px;">&nbsp;</h1>
-            </div>
-            <div class="colright">
-
-          </div>
-        </div>
-    </div>
-      <!-- PAge 4 -->
-    <div id="MP4" *ngIf="MP4 == true">
-        <div class="container-fluid d-none d-sm-none d-md-block" style="margin-left: 0px;">
-            <div class="row">
-                <div class="col-md-6 d-flex flex-fill justify-content-center align-items-center" style="background: #000000;height: 10vh;">
-                    <div style="width: 90%;"></div>
-                </div>
-                <div class="col d-flex justify-content-center align-items-center align-self-center" style="width: 2%;height: 10vh;">
-                    <p style="text-align: center;"></p>
-                </div>
-                <div class="col-md-5 d-flex flex-fill justify-content-center align-items-center" style="background: rgba(255,255,255,0);height: 10vh;">
-                    <div style="width: 90%;"></div>
-                </div>
-            </div>
-        </div>
-        <div class="container-fluid" style="margin: -23px;margin-left: 0px;padding-bottom: 1px;">
-            <div class="row">
-                <div class="col-md-6 d-flex flex-fill justify-content-center align-items-center" style="background: #000000;height: 50vh;">
-                    <div id="tlay-1" style="width: 90%;">
-                        <h1 style="font-family: 'Century Gothic';color: rgb(255,255,255);text-align: center;font-size: calc(50% + 1vw + 1vh);">
-                          You notice a glimmer to the key.<br>You feel it hum in your hands.<br>“Why??”<br><br>
-                      </h1>
-                      <button class="narrowImg" id="D1"  role="button" (click)="onClickMP4D1()"></button>
-                    </div>
-                </div>
-                <div class="col d-flex justify-content-center align-items-center align-self-center" style="width: 20%;height: 203px;">
-                        <button class="orBox justify-content-center"  alt="..."></button>
-                </div>
-                <div class="col-md-5 d-flex flex-fill justify-content-center align-items-center" style="background: rgba(255,255,255,0);height: 50vh;">
-                    <div id="tlay-2" style="width: 90%;">
-                        <h1 class="text-center" style="font-family: 'Century Gothic';color: rgb(0,0,0);text-align: center;font-size: calc(50% + 1vw + 1vh);">
-                          A voice in your head says,<br>“This key is important.<br>Something tells me it must be dealt with immediately…”<br><br>
-                        </h1>
-                        <button class="narrowImg" id="D2"   role="button" (click)="onClickMP4L1()"></button>
-    
-    
-    
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="container-fluid d-none d-sm-none d-md-block" style="margin-left: 0px;">
-            <div class="row">
-                <div class="col-md-6 d-flex flex-fill justify-content-center align-items-center" style="background: #000000;height: 50vh;">
-                    <div style="width: 90%;"></div>
-                </div>
-                <div class="col d-flex justify-content-center align-items-center align-self-center" style="width: 2%;height: 23px;">
-                    <p style="text-align: center;"></p>
-                </div>
-                <div class="col-md-5 d-flex flex-fill justify-content-center align-items-center" style="background: rgba(255,255,255,0);height: 50vh;">
-                    <div style="width: 90%;"></div>
-                </div>
-            </div>
-        </div>
-    </div>
-      <!-- PAge 2 -->
-    <div id="MP4D1" *ngIf="MP4D1 == true">
-        <div class="d-flex justify-content-center align-items-center"  style="height: calc(55vh + 14vw);">
-            <div id="tlay-1" style="width: 90%;">
-            <h1 id="comicfont-3" style="font-family: 'Comic Sans MS';text-align: center;font-size: calc(30% + 1vw + 1vh);color: rgb(255,255,255);">
-              To the average person,
-              <br>The key you hold looks ordinary.
-              <br>Something to ignore.
-              <br>But.
-              <br>You’re not average.
-              <br>And.
-              <br>It’s not ordinary.
-              <br>
-            </h1>
-            <button class="narrowImg" id="D1"   (click)="onClickMP4D2()" alt="..." ></button>
-        </div>
-    </div>
-        <div id="arrow-3" class="rownav">
-            <div class="colleft">
-                <h1 style="text-align: right;font-family: 'Century Gothic';font-size: calc(30% + 1vw + 1vh);margin-top: 9px;">&nbsp;</h1>
-            </div>
-            <div class="colright">
-    
-
-    
-            </div>
-        </div>
-    </div>
-    <div id="MP4D2" *ngIf="MP4D2 == true">
-        <div class="d-flex justify-content-center align-items-center" style="height: calc(55vh + 14vw);">
-            <div id="tlay-1" style="width: 90%;">
-            <h1 id="comicfont-4" style="font-family: 'Comic Sans MS';text-align: center;font-size: calc(30% + 1vw + 1vh);color: rgb(255,255,255);">
-              You hold a Master Key.<br>A key that comes alive.<br>In the hands of someone with a unique Eye.<br>Someone with Vision.<br></h1>
-              <button class="narrowImg" id="D1"   (click)="onClickMP4D3()" alt="..." ></button>
-
-        </div>
-    </div>
-        <div id="arrow-4" class="rownav">
-            <div class="colleft">
-                <h1 style="text-align: right;font-family: 'Century Gothic';font-size: calc(30% + 1vw + 1vh);margin-top: 9px;">&nbsp;</h1>
-            </div>
-            <div class="colright">
-    
-          </div>
-        </div>
-    </div>
-    <div id="MP4D3" *ngIf="MP4D3 == true">
-        <div class="d-flex justify-content-center align-items-center" style="height: calc(55vh + 14vw);">
-            <div id="tlay-1" style="width: 90%;">
-
-            <h1 id="comicfont-5" style="font-family: 'Comic Sans MS';text-align: center;font-size: calc(30% + 1vw + 1vh);color: rgb(255,255,255);">
-              With the key active and in your possession,
-              <br>You gain the power to determine the future.
-              <br>The opportunity to enter The Waiting Place.
-              <br>To learn its powerful secrets.
-            </h1>
-            <button class="narrowImg" id="D1"  role="button" (click)="onClickMP4D4()" alt="..." ></button>
-        </div>
-        </div>
-        <div id="arrow-5" class="rownav">
-            <div class="colleft">
-                <h1 style="text-align: right;font-family: 'Century Gothic';font-size: calc(30% + 1vw + 1vh);margin-top: 9px;">&nbsp;</h1>
-            </div>
-            <div class="colright">
-    
-          </div>
-        </div>
-    </div>
-    <div id="MP4D4" *ngIf="MP4D4 == true">
-        <div class="container-fluid d-none d-sm-none d-md-block" style="margin-left: 0px;">
-            <div class="row">
-                <div class="col-md-6 d-flex flex-fill justify-content-center align-items-center" style="background: #000000;height: 10vh;">
-                    <div style="width: 90%;"></div>
-                </div>
-                <div class="col d-flex justify-content-center align-items-center align-self-center" style="width: 2%;height: 10vh;">
-                    <p style="text-align: center;"></p>
-                </div>
-                <div class="col-md-5 d-flex flex-fill justify-content-center align-items-center" style="background: rgba(255,255,255,0);height: 10vh;">
-                    <div style="width: 90%;"></div>
-                </div>
-            </div>
-        </div>
-        <div class="container-fluid" style="margin: -23px;margin-left: 0px;padding-bottom: 1px;">
-            <div class="row">
-                <div class="col-md-6 d-flex flex-fill justify-content-center align-items-center" style="background: #000000;height: 50vh;">
-                    <div id="tlay-3" style="width: 90%;">
-                        <h1 style="font-family: 'Century Gothic';color: rgb(255,255,255);text-align: center;font-size: calc(50% + 1vw + 1vh);">
-                          “Wait.<br>What is The Waiting Place?”<br></h1>
-                          <button class="narrowImg" id="D1" role="button" (click)="onClickMP4D4P1()" alt="..." ></button>
-                      </div>
-                </div>
-                <div class="col d-flex justify-content-center align-items-center align-self-center" style="width: 2%;height: 23px;">
-                        <button class="orBox justify-content-center"  alt="..."></button>
-                </div>
-                <div class="col-md-5 d-flex flex-fill justify-content-center align-items-center" style="background: rgb(0,0,0);height: 50vh;">
-                    <div id="tlay-4" style="width: 90%;">
-                        <h1 class="text-center" style="font-family: 'Century Gothic';color: rgb(255,255,255);text-align: center;font-size: calc(50% + 1vw + 1vh);">
-                          “Am I Alone”<br>
-                      </h1>
-                      <button class="narrowImg" id="D1"   role="button" (click)="onClickMP4D4P2()" alt="..." ></button>
-    
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="container-fluid d-none d-sm-none d-md-block" style="margin-left: 0px;background: #000000;">
-            <div class="row">
-                <div class="col-md-6 d-flex flex-fill justify-content-center align-items-center" style="background: #000000;height: 50vh;">
-                    <div style="width: 90%;"></div>
-                </div>
-                <div class="col d-flex justify-content-center align-items-center align-self-center" style="width: 2%;height: 23px;">
-                    <p style="text-align: center;"></p>
-                </div>
-                <div class="col-md-5 d-flex flex-fill justify-content-center align-items-center" style="background: rgba(255,255,255,0);height: 50vh;">
-                    <div style="width: 90%;"></div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div id="MP4D4P1" *ngIf="MP4D4P1 == true">
-        <div class="d-flex justify-content-center align-items-center" style="height: calc(55vh + 14vw);background: #000000;">
-            <div id="tlay-1" style="width: 90%;">
-
-            <h1 id="comicfont-6" style="font-family: 'Comic Sans MS';text-align: center;font-size: calc(30% + 1vw + 1vh);color: rgb(255,255,255);">
-              You will learn more about this place soon.<br>But.<br>There is something pressing you must know first.<br></h1>
-              <button class="narrowImg" id="D1"   role="button" (click)="onClickMP4D4P2()" alt="..." ></button>
-
-            </div>
-    </div>
-        <div id="arrow-6" class="rownav" style="background: #000000;">
-            <div class="colleft">
-                <h1 style="text-align: right;font-family: 'Century Gothic';font-size: calc(30% + 1vw + 1vh);margin-top: 9px;">&nbsp;</h1>
-            </div>
-            <div class="colright">
-          </div>
-        </div>
-    </div>
-    <div id="MP4D4P2" *ngIf="MP4D4P2 == true">
-        <div class="d-flex justify-content-center align-items-center" style="height: calc(55vh + 14vw);background: #000000;">
-            <div id="tlay-1" style="width: 90%;">
-
-            <h1 id="comicfont-7" style="font-family: 'Comic Sans MS';text-align: center;font-size: calc(30% + 1vw + 1vh);color: rgb(255,255,255);">
-              The power of the master key cannot be hoarded.
-              <br>It’s bound to others,
-              <br>And to something greater.
-              <br>
-              <br>You were invited by someone,
-              <br>Who considers you trustworthy.
-              <br>
-              <br>But the key must be shared.
-              <br>There is a number that must accept.
-              <br>Or.
-              <br>The Key may move on.
-              <br>You have 72 hours to act
-              <br></h1>
-              <button class="narrowImg" id="D1"   role="button" (click)="onClickMP4D4P3()" alt="..." ></button>
-            </div>
-        </div>
-        <div id="arrow-7" class="rownav" style="background: #000000;">
-            <div class="colleft">
-                <h1 style="text-align: right;font-family: 'Century Gothic';font-size: calc(30% + 1vw + 1vh);margin-top: 9px;">&nbsp;</h1>
-            </div>
-            <div class="colright">
-            </div>
-        </div>
-    </div>
-    <div id="MP4D4P3" *ngIf="MP4D4P3 == true">
-        <div class="d-flex justify-content-center align-items-center" style="height: calc(55vh + 14vw);">
-            <div id="tlay-1" style="width: 90%;">
-
-            <h1 id="comicfont-8" style="font-family: 'Comic Sans MS';text-align: center;font-size: calc(30% + 1vw + 1vh);color: rgb(255,255,255);">
-              Should you avoid making the decision.
-              <br>The key’s power may fade.
-              <br>
-              <br>It is completely gone.
-              <br>
-              <br>Its life may pass.
-              <br>Go to someone else’s hands.
-              <br>Someone else in your community.
-              <br>Who may or may not
-              <br>Invite you.
-              <br></h1>
-              <button class="narrowImg" id="D1" role="button" (click)="onClicklastPage()" alt="..." ></button>
-
-            </div>
-        </div>
-        <div id="arrow-8" class="rownav">
-            <div class="colleft">
-                <h1 style="color: rgb(255,255,255); text-align: right;font-family: 'Century Gothic';font-size: calc(30% + 1vw + 1vh);margin-top: 9px;">“Got it. But you’re going to have to tell me what The Waiting Place is.”
-                </h1>
-            </div>
-            <div class="colright">
-              <a href="javascript:SwapDivsWithClick('MP4D4P3','MP4D4P4')">
-              </a>
-            </div>
-        </div>
-    </div>
-    <div id="MP4L1" *ngIf="MP4L1 == true">
-        <div class="d-flex justify-content-center align-items-center" style="height: calc(55vh + 14vw);">
-            <div id="tlay-1" style="width: 90%;">
-            <h1 id="comicfont-10" style="font-family: 'Comic Sans MS';text-align: center;font-size: calc(30% + 1vw + 1vh);color: rgb(33,37,41);">
-              This key is an invitation to The Waiting Place.<br>You were one of the only people in your community to receive one.<br>You were hand-selected.<br>You are needed for what is to come.<br></h1>
-              <button class="narrowImg" id="D2"  role="button" (click)="onClickMP4L2()" alt="..." ></button>
-            </div>
-            </div>
-        <div id="arrow-10" class="rownav">
-            <div class="colleft">
-                <h1 style="text-align: right;font-family: 'Century Gothic';font-size: calc(30% + 1vw + 1vh);margin-top: 9px;">"What is The Waiting Place?”&nbsp;</h1>
-            </div>
-            <div class="colright">
-    
-            </div>
-        </div>
-    </div>
-    <div id="MP4L2" *ngIf="MP4L2 == true">
-        <div class="d-flex justify-content-center align-items-center" style="height: calc(55vh + 14vw);">
-            <div id="tlay-1" style="width: 90%;">
-            <h1 id="comicfont-11" style="font-family: 'Comic Sans MS';text-align: center;font-size: calc(30% + 1vw + 1vh);color: rgb(33,37,41);">
-                You have 72 hours to act. 
-              <br>And your Key is bound to others.
-              <br>To those chosen by you, the Master Key holder.
-              <br>
-              <br>You were deemed trustworthy.
-              <br>Ready for this key
-              <br>Now you must ready your crew
-              <br></h1>
-              <button class="narrowImg" id="D2"  role="button" (click)="onClickMP4L3()" alt="..." ></button>
-            </div>    
-        </div>
-        <div id="arrow-11" class="rownav">
-            <div class="colleft">
-                <h1 style="text-align: right;font-family: 'Century Gothic';font-size: calc(30% + 1vw + 1vh);margin-top: 9px;margin-right: 6px;">“Okay.&nbsp;But but I’m not making any decision until you tell me: <br>What is The Waiting Place?”&nbsp;</h1>
-            </div>
-            <div class="colright">
-            </div>
-        </div>
-    </div>
-    <div id="MP4L3" *ngIf="MP4L3 == true">
-        <div class="d-flex justify-content-center align-items-center" style="height: calc(55vh + 14vw);">
-            <div id="tlay-1" style="width: 90%;">
-            <h1 id="comicfont-12" style="font-family: 'Comic Sans MS';text-align: center;font-size: calc(30% + 1vw + 1vh);color: rgb(33,37,41);">
-                The Keys must find their match.
-                <br>Those with initiative and heart
-
-              <br></h1>
-              <button class="narrowImg" id="D2" role="button" (click)="onClicklastPage()" alt="..." ></button>
-            </div>
-        </div>
-        <div id="arrow-12" class="rownav">
-            <div class="colleft">
-                <h1 style="text-align: right;font-family: 'Century Gothic';font-size: calc(30% + 1vw + 1vh);margin-top: 9px;">“Seriously. What is The Waiting Place!?”&nbsp;</h1>
-            </div>
-            <div class="colright">
-            </div>
-        </div>
-    </div>
-    <!-- <script type="text/javascript">
-    function SwapDivsWithClick(div1,div2)
-    {
-    d1 = document.getElementById(div1);
-    d2 = document.getElementById(div2);
-    if( d2.style.display == "none" )
-    {
-      d1.style.display = "none";
-      d2.style.display = "block";
-    }
-    else
-    {
-      d1.style.display = "block";
-      d2.style.display = "none";
-    }
-    }
-    </script> -->
-    
-    
-    
-    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
-    <script src="assets/js/fonts.js"></script>
-    <script src="assets/js/images.js"></script>
-    <script src="assets/js/kholder.js"></script>
-    
-    
-    
-    
-    <div id="lastPage" *ngIf="lastPage == true">
-      <div class="d-flex d-lg-flex align-items-md-start justify-content-lg-start align-items-lg-start" style="height: 30vh;">
-      <button class="d-lg-flex justify-content-lg-center A1 narrowImg" alt="..." style="margin-left: 1%;margin-top: 1%;height: calc(5vh + 1.5vw);"></button>
-      </div>
-      <div style="height: 45vh;">
-          <h1 class="date" style="font-family: 'Century Gothic';text-align: center;font-size: calc(100% + 3vw + 3vh);">
-            {{eventDate}}</h1>
-          <h1 class="time" style="font-family: 'Comic Sans MS';transform: rotate(-7deg);text-align: center;font-size: calc(100% + 2vw);margin-top: calc(0.5% + 1vw + 1vh);">
-            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {{eventTime}}</h1>
-      </div>
-      <div class="d-flex d-lg-flex justify-content-center align-items-end justify-content-lg-center align-items-lg-end" style="height: 25vh;width: 50%;">
-      <button class="narrowImg" id="More" style="width: calc(15vh + 5vw);" alt="..."></button>
-      </div>
-      <div class="container-fluid" style="margin-top: 10vh;margin-bottom: 5vh;">
-          <div class="row">
-              <div class="col-md-6" style="color: rgb(255,255,255);width: 20%;">
-                  <div></div>
+  <!-- <div *ngIf="landingPage == true" class="d-flex justify-content-end" id="footer" style="margin-top: 20%;">
+    <a href="contact.html" style="margin-right: 5%;color: rgba(13,110,253,0);">
+        <h1 id="help" style="font-family: 'Comic Sans MS';font-size: 1rem;text-align: right;margin-right: 5%;width: 18rem;color: rgb(0,0,0);">
+          <a href="{{helpLink}}" style="color: blaCK;">
+          Help! My key isn’t working!
+      </a>
+      </h1>
+    </a></div> -->
+  
+  
+  <!-- Master Path -->
+  <div *ngIf="pathSelect == 'M'">
+      <!-- Page 1 -->
+      <div id="MP1" *ngIf="MP1 == true">
+          <div class="d-flex justify-content-center align-items-center" style="height: 50vh;">
+              <div id="tlay-1" style="width: 90%;">
+                  <h1 id="comicfont" style="font-family: 'Comic Sans MS';text-align: center;font-size: calc(30% + 1vw + 1vh);">
+                      A key led you here.<br>But.<br>The wheels were set in motion long before that.<br>They started to turn at a time in your past.<br>A moment when you made a decision.<br>
+                  </h1>
+                  <button class="narrowImg" id="D2" role="button" (click)="onClickMP2()"></button>
               </div>
-              <div class="col-md-6" style="background: #000000;width: 80%;">
-                  <h1 style="font-family: beloved-sans;color: rgb(255,255,255);margin-top: 3%;margin-bottom: 1%;margin-left: 3%;font-size: calc(100% + 4vw);">
-                  <strong>The Waiting Place.</strong>
+          </div>
+          <div id="arrow-1" class="rownav">
+              <div class="colleft">
+                  <h1 style="text-align: right;font-family: 'Century Gothic';font-size: calc(30% + 1vw + 1vh);margin-top: 9px;">&nbsp;</h1>
+              </div>
+              <div class="colright">
+                
+              </div>
+          </div>
+      </div>
+      
+      <!-- PAge 2 -->
+      <div *ngIf="MP2 == true" id="MP2">
+          <div class="d-flex justify-content-center align-items-center" style="height: calc(55vh + 14vw);">
+              <div id="tlay-1" style="width: 90%;">
+              <h1 id="comicfont" style="font-family: 'Comic Sans MS';text-align: center;font-size: calc(30% + 1vw + 1vh);">
+                Though you may not have realized it then,<br>You faced a fork in the road.<br>One path was easy.<br>The other unclear.<br>
+              </h1>
+              <button class="narrowImg" id="D2" role="button" (click)="onClickMP3()"></button>
+          </div>
+          </div>
+          <div id="arrow" class="rownav">
+              <div class="colleft">
+                  <h1 style="text-align: right;font-family: 'Century Gothic';font-size: calc(30% + 1vw + 1vh);margin-top: 9px;">&nbsp;</h1>
+              </div>
+              <div class="colright">
+                    
+              </div>
+          </div>
+      </div>
+        <!-- PAge 3 -->
+      <div id="MP3" *ngIf="MP3 == true">
+          <div class="d-flex justify-content-center align-items-center" style="height: calc(55vh + 14vw);">
+              <div id="tlay-1" style="width: 90%;">
+              <h1 id="comicfont-2" style="font-family: 'Comic Sans MS';text-align: center;font-size: calc(30% + 1vw + 1vh);color: rgb(33, 37, 41);">
+                You made a choice.<br>And.<br>That choice is the true reason you are here.<br>It is why you are special.<br>It is why you received a key.<br></h1>
+                <button class="narrowImg" id="D2" role="button" (click)="onClickMP4()"></button>
+              </div>
+              </div>
+          <div id="arrow-2" class="rownav">
+              <div class="colleft">
+                  <h1 style="text-align: right;font-family: 'Century Gothic';font-size: calc(30% + 1vw + 1vh);margin-top: 9px;">&nbsp;</h1>
+              </div>
+              <div class="colright">
+  
+            </div>
+          </div>
+      </div>
+        <!-- PAge 4 -->
+      <div id="MP4" *ngIf="MP4 == true">
+          <div class="container-fluid d-none d-sm-none d-md-block" style="margin-left: 0px;">
+              <div class="row">
+                  <div class="col-md-6 d-flex flex-fill justify-content-center align-items-center" style="background: #000000;height: 10vh;">
+                      <div style="width: 90%;"></div>
+                  </div>
+                  <div class="col d-flex justify-content-center align-items-center align-self-center" style="width: 2%;height: 10vh;">
+                      <p style="text-align: center;"></p>
+                  </div>
+                  <div class="col-md-5 d-flex flex-fill justify-content-center align-items-center" style="background: rgba(255,255,255,0);height: 10vh;">
+                      <div style="width: 90%;"></div>
+                  </div>
+              </div>
+          </div>
+          <div class="container-fluid" style="margin: -23px;margin-left: 0px;padding-bottom: 1px;">
+              <div class="row">
+                  <div class="col-md-6 d-flex flex-fill justify-content-center align-items-center" style="background: #000000;height: 50vh;">
+                      <div id="tlay-1" style="width: 90%;">
+                          <h1 style="font-family: 'Century Gothic';color: rgb(255,255,255);text-align: center;font-size: calc(50% + 1vw + 1vh);">
+                            You notice a glimmer to the key.<br>You feel it hum in your hands.<br>“Why??”<br><br>
+                        </h1>
+                        <button class="narrowImg" id="D1"  role="button" (click)="onClickMP4D1()"></button>
+                      </div>
+                  </div>
+                  <div class="col d-flex justify-content-center align-items-center align-self-center" style="width: 20%;height: 203px;">
+                          <button class="orBox justify-content-center"  alt="..."></button>
+                  </div>
+                  <div class="col-md-5 d-flex flex-fill justify-content-center align-items-center" style="background: rgba(255,255,255,0);height: 50vh;">
+                      <div id="tlay-2" style="width: 90%;">
+                          <h1 class="text-center" style="font-family: 'Century Gothic';color: rgb(0,0,0);text-align: center;font-size: calc(50% + 1vw + 1vh);">
+                            A voice in your head says,<br>“This key is important.<br>Something tells me it must be dealt with immediately…”<br><br>
+                          </h1>
+                          <button class="narrowImg" id="D2"   role="button" (click)="onClickMP4L1()"></button>
+      
+      
+      
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="container-fluid d-none d-sm-none d-md-block" style="margin-left: 0px;">
+              <div class="row">
+                  <div class="col-md-6 d-flex flex-fill justify-content-center align-items-center" style="background: #000000;height: 50vh;">
+                      <div style="width: 90%;"></div>
+                  </div>
+                  <div class="col d-flex justify-content-center align-items-center align-self-center" style="width: 2%;height: 23px;">
+                      <p style="text-align: center;"></p>
+                  </div>
+                  <div class="col-md-5 d-flex flex-fill justify-content-center align-items-center" style="background: rgba(255,255,255,0);height: 50vh;">
+                      <div style="width: 90%;"></div>
+                  </div>
+              </div>
+          </div>
+      </div>
+        <!-- PAge 2 -->
+      <div id="MP4D1" *ngIf="MP4D1 == true">
+          <div class="d-flex justify-content-center align-items-center"  style="height: calc(55vh + 14vw);">
+              <div id="tlay-1" style="width: 90%;">
+              <h1 id="comicfont-3" style="font-family: 'Comic Sans MS';text-align: center;font-size: calc(30% + 1vw + 1vh);color: rgb(255,255,255);">
+                To the average person,
+                <br>The key you hold looks ordinary.
+                <br>Something to ignore.
+                <br>But.
+                <br>You’re not average.
+                <br>And.
+                <br>It’s not ordinary.
+                <br>
+              </h1>
+              <button class="narrowImg" id="D1"   (click)="onClickMP4D2()" alt="..." ></button>
+          </div>
+      </div>
+          <div id="arrow-3" class="rownav">
+              <div class="colleft">
+                  <h1 style="text-align: right;font-family: 'Century Gothic';font-size: calc(30% + 1vw + 1vh);margin-top: 9px;">&nbsp;</h1>
+              </div>
+              <div class="colright">
+      
+  
+      
+              </div>
+          </div>
+      </div>
+      <div id="MP4D2" *ngIf="MP4D2 == true">
+          <div class="d-flex justify-content-center align-items-center" style="height: calc(55vh + 14vw);">
+              <div id="tlay-1" style="width: 90%;">
+              <h1 id="comicfont-4" style="font-family: 'Comic Sans MS';text-align: center;font-size: calc(30% + 1vw + 1vh);color: rgb(255,255,255);">
+                You hold a Master Key.<br>A key that comes alive.<br>In the hands of someone with a unique Eye.<br>Someone with Vision.<br></h1>
+                <button class="narrowImg" id="D1"   (click)="onClickMP4D3()" alt="..." ></button>
+  
+          </div>
+      </div>
+          <div id="arrow-4" class="rownav">
+              <div class="colleft">
+                  <h1 style="text-align: right;font-family: 'Century Gothic';font-size: calc(30% + 1vw + 1vh);margin-top: 9px;">&nbsp;</h1>
+              </div>
+              <div class="colright">
+      
+            </div>
+          </div>
+      </div>
+      <div id="MP4D3" *ngIf="MP4D3 == true">
+          <div class="d-flex justify-content-center align-items-center" style="height: calc(55vh + 14vw);">
+              <div id="tlay-1" style="width: 90%;">
+  
+              <h1 id="comicfont-5" style="font-family: 'Comic Sans MS';text-align: center;font-size: calc(30% + 1vw + 1vh);color: rgb(255,255,255);">
+                With the key active and in your possession,
+                <br>You gain the power to determine the future.
+                <br>The opportunity to enter The Waiting Place.
+                <br>To learn its powerful secrets.
+              </h1>
+              <button class="narrowImg" id="D1"  role="button" (click)="onClickMP4D4()" alt="..." ></button>
+          </div>
+          </div>
+          <div id="arrow-5" class="rownav">
+              <div class="colleft">
+                  <h1 style="text-align: right;font-family: 'Century Gothic';font-size: calc(30% + 1vw + 1vh);margin-top: 9px;">&nbsp;</h1>
+              </div>
+              <div class="colright">
+      
+            </div>
+          </div>
+      </div>
+      <div id="MP4D4" *ngIf="MP4D4 == true">
+          <div class="container-fluid d-none d-sm-none d-md-block" style="margin-left: 0px;">
+              <div class="row">
+                  <div class="col-md-6 d-flex flex-fill justify-content-center align-items-center" style="background: #000000;height: 10vh;">
+                      <div style="width: 90%;"></div>
+                  </div>
+                  <div class="col d-flex justify-content-center align-items-center align-self-center" style="width: 2%;height: 10vh;">
+                      <p style="text-align: center;"></p>
+                  </div>
+                  <div class="col-md-5 d-flex flex-fill justify-content-center align-items-center" style="background: rgba(255,255,255,0);height: 10vh;">
+                      <div style="width: 90%;"></div>
+                  </div>
+              </div>
+          </div>
+          <div class="container-fluid" style="margin: -23px;margin-left: 0px;padding-bottom: 1px;">
+              <div class="row">
+                  <div class="col-md-6 d-flex flex-fill justify-content-center align-items-center" style="background: #000000;height: 50vh;">
+                      <div id="tlay-3" style="width: 90%;">
+                          <h1 style="font-family: 'Century Gothic';color: rgb(255,255,255);text-align: center;font-size: calc(50% + 1vw + 1vh);">
+                            “Wait.<br>What is The Waiting Place?”<br></h1>
+                            <button class="narrowImg" id="D1" role="button" (click)="onClickMP4D4P1()" alt="..." ></button>
+                        </div>
+                  </div>
+                  <div class="col d-flex justify-content-center align-items-center align-self-center" style="width: 2%;height: 23px;">
+                          <button class="orBox justify-content-center"  alt="..."></button>
+                  </div>
+                  <div class="col-md-5 d-flex flex-fill justify-content-center align-items-center" style="background: rgb(0,0,0);height: 50vh;">
+                      <div id="tlay-4" style="width: 90%;">
+                          <h1 class="text-center" style="font-family: 'Century Gothic';color: rgb(255,255,255);text-align: center;font-size: calc(50% + 1vw + 1vh);">
+                            “Am I Alone”<br>
+                        </h1>
+                        <button class="narrowImg" id="D1"   role="button" (click)="onClickMP4D4P2()" alt="..." ></button>
+      
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="container-fluid d-none d-sm-none d-md-block" style="margin-left: 0px;background: #000000;">
+              <div class="row">
+                  <div class="col-md-6 d-flex flex-fill justify-content-center align-items-center" style="background: #000000;height: 50vh;">
+                      <div style="width: 90%;"></div>
+                  </div>
+                  <div class="col d-flex justify-content-center align-items-center align-self-center" style="width: 2%;height: 23px;">
+                      <p style="text-align: center;"></p>
+                  </div>
+                  <div class="col-md-5 d-flex flex-fill justify-content-center align-items-center" style="background: rgba(255,255,255,0);height: 50vh;">
+                      <div style="width: 90%;"></div>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <div id="MP4D4P1" *ngIf="MP4D4P1 == true">
+          <div class="d-flex justify-content-center align-items-center" style="height: calc(55vh + 14vw);background: #000000;">
+              <div id="tlay-1" style="width: 90%;">
+  
+              <h1 id="comicfont-6" style="font-family: 'Comic Sans MS';text-align: center;font-size: calc(30% + 1vw + 1vh);color: rgb(255,255,255);">
+                You will learn more about this place soon.<br>But.<br>There is something pressing you must know first.<br></h1>
+                <button class="narrowImg" id="D1"   role="button" (click)="onClickMP4D4P2()" alt="..." ></button>
+  
+              </div>
+      </div>
+          <div id="arrow-6" class="rownav" style="background: #000000;">
+              <div class="colleft">
+                  <h1 style="text-align: right;font-family: 'Century Gothic';font-size: calc(30% + 1vw + 1vh);margin-top: 9px;">&nbsp;</h1>
+              </div>
+              <div class="colright">
+            </div>
+          </div>
+      </div>
+      <div id="MP4D4P2" *ngIf="MP4D4P2 == true">
+          <div class="d-flex justify-content-center align-items-center" style="height: calc(55vh + 14vw);background: #000000;">
+              <div id="tlay-1" style="width: 90%;">
+  
+              <h1 id="comicfont-7" style="font-family: 'Comic Sans MS';text-align: center;font-size: calc(30% + 1vw + 1vh);color: rgb(255,255,255);">
+                The power of the master key cannot be hoarded.
+                <br>It’s bound to others,
+                <br>And to something greater.
+                <br>
+                <br>You were invited by someone,
+                <br>Who considers you trustworthy.
+                <br>
+                <br>But the key must be shared.
+                <br>There is a number that must accept.
+                <br>Or.
+                <br>The Key may move on.
+                <br>You have 72 hours to act
+                <br></h1>
+                <button class="narrowImg" id="D1"   role="button" (click)="onClickMP4D4P3()" alt="..." ></button>
+              </div>
+          </div>
+          <div id="arrow-7" class="rownav" style="background: #000000;">
+              <div class="colleft">
+                  <h1 style="text-align: right;font-family: 'Century Gothic';font-size: calc(30% + 1vw + 1vh);margin-top: 9px;">&nbsp;</h1>
+              </div>
+              <div class="colright">
+              </div>
+          </div>
+      </div>
+      <div id="MP4D4P3" *ngIf="MP4D4P3 == true">
+          <div class="d-flex justify-content-center align-items-center" style="height: calc(55vh + 14vw);">
+              <div id="tlay-1" style="width: 90%;">
+  
+              <h1 id="comicfont-8" style="font-family: 'Comic Sans MS';text-align: center;font-size: calc(30% + 1vw + 1vh);color: rgb(255,255,255);">
+                Should you avoid making the decision.
+                <br>The key’s power may fade.
+                <br>
+                <br>It is completely gone.
+                <br>
+                <br>Its life may pass.
+                <br>Go to someone else’s hands.
+                <br>Someone else in your community.
+                <br>Who may or may not
+                <br>Invite you.
+                <br></h1>
+                <button class="narrowImg" id="D1" role="button" (click)="onClicklastPage()" alt="..." ></button>
+  
+              </div>
+          </div>
+          <div id="arrow-8" class="rownav">
+              <div class="colleft">
+                  <h1 style="color: rgb(255,255,255); text-align: right;font-family: 'Century Gothic';font-size: calc(30% + 1vw + 1vh);margin-top: 9px;">“Got it. But you’re going to have to tell me what The Waiting Place is.”
                   </h1>
               </div>
-          </div>
-      </div>
-      <h1 style="font-family: 'Century Gothic';text-align: center;font-size: calc(40% + 2vw + 1vh);">A place some have heard of,<br>But few have found.</h1>
-      <div class="container-fluid" style="margin-top: 3%;">
-          <div class="row">
-              <div class="col-md-6" style="color: rgb(255,255,255);width: 40%;border-bottom: 2px solid rgb(0,0,0) ;">
-                  <h1 style="font-family: beloved-sans;color: rgb(0,0,0);margin-top: 3%;margin-bottom: 1%;margin-left: 3%;text-align: right;"><strong>Rumors.</strong></h1>
-              </div>
-              <div class="col-md-6" style="background: rgba(255,255,255,0);width: 60%;">
-                  <div></div>
+              <div class="colright">
+                <a href="javascript:SwapDivsWithClick('MP4D4P3','MP4D4P4')">
+                </a>
               </div>
           </div>
       </div>
-      <div class="d-flex d-lg-flex hyper" id="blockcenter" style="height: 100%;max-width: 1080px;">
-      <button class="d-lg-flex Block1" usemap="#workmap"></button><a id="blockcenter" href="https://www.dinerenblanc.com/" alt="..." target="_tab1" style="top: 22%; left: 40%; width: 17%; height: 8%;">
-      </a>
-      </div>
-      <div id="blockcenter" style="height: 100%;max-width: 1080px;">
-      <button class="Block2" style="width: 100%;" alt="..."></button>
-      </div>
-      <div id="blockcenter" class="hyper" style="height: 100%;max-width: 1080px;">
-      <button class="Block3"style="width: 100%;"></button>
-      <a id="blockcenter" href="#" target="_tab2" style="top: 17%; left: 48%; width: 22%; height: 11%;"></a>
-      </div>
-      <div id="blockcenter" class="hyper" style="height: 100%;max-width: 1080px;">
-      <button class="Block4" style="width: 100%;"></button>
-      </div>
-      <div class="container-fluid" style="margin-top: 2%;" alt="...">
-          <div class="row">
-              <div class="col-md-6" style="background: rgba(255,255,255,0);width: 60%;">
-                  <div></div>
+      <div id="MP4L1" *ngIf="MP4L1 == true">
+          <div class="d-flex justify-content-center align-items-center" style="height: calc(55vh + 14vw);">
+              <div id="tlay-1" style="width: 90%;">
+              <h1 id="comicfont-10" style="font-family: 'Comic Sans MS';text-align: center;font-size: calc(30% + 1vw + 1vh);color: rgb(33,37,41);">
+                This key is an invitation to The Waiting Place.<br>You were one of the only people in your community to receive one.<br>You were hand-selected.<br>You are needed for what is to come.<br></h1>
+                <button class="narrowImg" id="D2"  role="button" (click)="onClickMP4L2()" alt="..." ></button>
               </div>
-              <div class="col-md-6" style="color: rgb(255,255,255);width: 40%;border-bottom: 2px solid rgb(0,0,0) ;">
-                  <h1 style="font-family: beloved-sans;color: rgb(0,0,0);margin-top: 3%;margin-bottom: 1%;margin-left: 3%;text-align: left;"><strong>Guests.</strong></h1>
+              </div>
+          <div id="arrow-10" class="rownav">
+              <div class="colleft">
+                  <h1 style="text-align: right;font-family: 'Century Gothic';font-size: calc(30% + 1vw + 1vh);margin-top: 9px;">"What is The Waiting Place?”&nbsp;</h1>
+              </div>
+              <div class="colright">
+      
               </div>
           </div>
       </div>
-      <div id="blockcenter" style="height: 100%;max-width: 1080px;">
-      <button class="GuestBlock"  style="width: 100%;" alt="..."></button>
-      </div>
-      <div class="container-fluid">
-          <div class="row">
-              <div class="col-9 col-sm-8 col-md-7" style="color: rgb(255,255,255);border-bottom: 2px solid rgb(0,0,0);">
-                  <h1 style="font-family: beloved-sans;color: rgb(0,0,0);margin-top: 3%;margin-bottom: 1%;margin-left: 3%;text-align: right;"><strong>Skin In The Game.</strong></h1>
+      <div id="MP4L2" *ngIf="MP4L2 == true">
+          <div class="d-flex justify-content-center align-items-center" style="height: calc(55vh + 14vw);">
+              <div id="tlay-1" style="width: 90%;">
+              <h1 id="comicfont-11" style="font-family: 'Comic Sans MS';text-align: center;font-size: calc(30% + 1vw + 1vh);color: rgb(33,37,41);">
+                  You have 72 hours to act. 
+                <br>And your Key is bound to others.
+                <br>To those chosen by you, the Master Key holder.
+                <br>
+                <br>You were deemed trustworthy.
+                <br>Ready for this key
+                <br>Now you must ready your crew
+                <br></h1>
+                <button class="narrowImg" id="D2"  role="button" (click)="onClickMP4L3()" alt="..." ></button>
+              </div>    
+          </div>
+          <div id="arrow-11" class="rownav">
+              <div class="colleft">
+                  <h1 style="text-align: right;font-family: 'Century Gothic';font-size: calc(30% + 1vw + 1vh);margin-top: 9px;margin-right: 6px;">“Okay.&nbsp;But but I’m not making any decision until you tell me: <br>What is The Waiting Place?”&nbsp;</h1>
               </div>
-              <div class="col" style="background: rgba(255,255,255,0);">
-                  <div></div>
+              <div class="colright">
               </div>
           </div>
       </div>
-      <div id="blockcenter" style="height: 100%;max-width: 1080px;">
-      <button class="SkinBlock"  style="width: 100%;" alt="..."></button>
-          <div style="margin-left: 9%;">
-              <p style="font-family: 'Comic Sans MS';font-size: min(2.5vw, 30px);">Need help covering the fee?<br><a href="#contactfrm" style="color: rgb(0,0,0);font-family: 'Comic Sans MS';">Let us know.</a><br>And.<br>If you walk away from the evening,<br>Less than delighted,<br>We'll give you your money back.</p>
-          </div>
-      </div>
-      <div class="container-fluid">
-          <div class="row">
-              <div class="col-md-6" style="background: rgba(255,255,255,0);width: 30%;">
-                  <div></div>
-              </div>
-              <div class="col-md-6" style="color: rgb(255,255,255);width: 70%;border-bottom: 2px solid rgb(0,0,0);">
-                  <h1 style="font-family: beloved-sans;color: rgb(0,0,0);margin-top: 3%;margin-bottom: 1%;margin-left: 3%;text-align: left;"><strong>The Organizers.</strong></h1>
+      <div id="MP4L3" *ngIf="MP4L3 == true">
+          <div class="d-flex justify-content-center align-items-center" style="height: calc(55vh + 14vw);">
+              <div id="tlay-1" style="width: 90%;">
+              <h1 id="comicfont-12" style="font-family: 'Comic Sans MS';text-align: center;font-size: calc(30% + 1vw + 1vh);color: rgb(33,37,41);">
+                  The Keys must find their match.
+                  <br>Those with initiative and heart
+  
+                <br></h1>
+                <button class="narrowImg" id="D2" role="button" (click)="onClicklastPage()" alt="..." ></button>
               </div>
           </div>
-      </div>
-      <div id="blockcenter" style="height: 100%;max-width: 1080px;">
-      <button class="OrgBlok" style="width: 100%;margin-bottom: -7.5%;" alt="..."></button>
-      </div>
-      <div class="container-fluid">
-          <div class="row">
-              <div class="col-md-6" style="color: rgb(255,255,255);width: 40%;border-bottom: 2px solid rgb(0,0,0) ;">
-                  <h1 style="font-family: beloved-sans;color: rgb(0,0,0);margin-top: 3%;margin-bottom: 1%;margin-left: 3%;text-align: right;"><strong>Location.</strong></h1>
+          <div id="arrow-12" class="rownav">
+              <div class="colleft">
+                  <h1 style="text-align: right;font-family: 'Century Gothic';font-size: calc(30% + 1vw + 1vh);margin-top: 9px;">“Seriously. What is The Waiting Place!?”&nbsp;</h1>
               </div>
-              <div class="col-md-6" style="background: rgba(255,255,255,0);width: 60%;">
-                  <div></div>
+              <div class="colright">
               </div>
           </div>
       </div>
-      <div id="blockcenter" style="height: 100%;max-width: 1080px;">
-      <button class="LocaBlock"  style="width: 100%;" alt="..."></button>
-      </div>
-      <div class="container-fluid" style="margin-top: -3%;">
-          <div class="row">
-              <div class="col-md-6" style="background: rgba(255,255,255,0);width: 20%;">
-                  <div></div>
-              </div>
-              <div class="col-md-6" style="color: rgb(255,255,255);width: 80%;border-bottom: 2px solid rgb(0,0,0);">
-                  <h1 style="font-family: beloved-sans;color: rgb(0,0,0);margin-top: 3%;margin-bottom: 1%;margin-left: 3%;text-align: right;"><br></h1>
-              </div>
-          </div>
-      </div>
-      <div>
-          <h1 style="font-family: 'Comic Sans MS';font-size: calc(30% + 1vh + 1vw);text-align: center;line-height: 160%;"><br><br>You have more questions.<br>You want more details.<br>Answers will come.<br>Before you travel.<br>Before you pay your stake.<br><br>But.<br>For Now.<br>We have shared all we can.<br>to tell you more.<br>we must be certain.<br>the keys are in the right hands.</h1>
-      </div>
-      <div class="container-fluid" style="margin-top: calc(10% + 1vw + 1vh);">
-          <div class="row">
-              <div class="col-md-6" style="background: #000000;width: 50%;">
-                  <h1 style="font-family: beloved-sans;color: rgb(255,255,255);margin-top: 3%;margin-bottom: 1%;margin-left: 3%;text-align: right;"><strong>Next Step.</strong></h1>
-              </div>
-              <div class="col-md-6" style="color: rgb(255,255,255);width: 50%;">
-                  <div></div>
-              </div>
-          </div>
-      </div>
-      <div class="d-flex justify-content-center align-items-center" id="blockcenter" style="height: 100%;max-width: 1080px;">
-      <button class="NextBlock" style="width: 90%;"  alt="..."></button>
-      </div>
-    
-      <div class="d-flex d-lg-flex justify-content-end justify-content-lg-end" id="floater">
-      <a href="{{buttonLink}}">
-          <button class="button"  style="height: calc(10vh + 4vw);"></button>
-      </a>
-      </div>
-    </div>
-    </div>
-
-    <!-- Guest Path -->
-<div *ngIf="pathSelect == 'G'">
-        <!-- Page 1 -->
-        <div id="MP1" *ngIf="MP1 == true">
-            <div class="d-flex justify-content-center align-items-center" style="height: 50vh;">
-                <div id="tlay-1" style="width: 90%;">
-                    <h1 id="comicfont" style="font-family: 'Comic Sans MS';text-align: center;font-size: calc(30% + 1vw + 1vh);">
-                        A key led you here.<br>But.<br>The wheels were set in motion long before that.<br>They started to turn at a time in your past.<br>A moment when you made a decision.<br>
-                    </h1>
-                    <button class="narrowImg" id="D2"  role="button" (click)="onClickMP2()"></button>
-                </div>
-            </div>
-            <div id="arrow-1" class="rownav">
-                <div class="colleft">
-                    <h1 style="text-align: right;font-family: 'Century Gothic';font-size: calc(30% + 1vw + 1vh);margin-top: 9px;">&nbsp;</h1>
-                </div>
-                <div class="colright">
-                  
-                </div>
-            </div>
+      <!-- <script type="text/javascript">
+      function SwapDivsWithClick(div1,div2)
+      {
+      d1 = document.getElementById(div1);
+      d2 = document.getElementById(div2);
+      if( d2.style.display == "none" )
+      {
+        d1.style.display = "none";
+        d2.style.display = "block";
+      }
+      else
+      {
+        d1.style.display = "block";
+        d2.style.display = "none";
+      }
+      }
+      </script> -->
+      
+      
+      
+      <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+      <script src="assets/js/fonts.js"></script>
+      <script src="assets/js/images.js"></script>
+      <script src="assets/js/kholder.js"></script>
+      
+      
+      
+      
+      <div id="lastPage" *ngIf="lastPage == true">
+        <div class="d-flex d-lg-flex align-items-md-start justify-content-lg-start align-items-lg-start" style="height: 30vh;">
+        <button class="d-lg-flex justify-content-lg-center A1 narrowImg" alt="..." style="margin-left: 1%;margin-top: 1%;height: calc(5vh + 1.5vw);"></button>
         </div>
-        
-        <!-- PAge 2 -->
-        <div *ngIf="MP2 == true" id="MP2">
-            <div class="d-flex justify-content-center align-items-center" style="height: calc(55vh + 14vw);">
-                <div id="tlay-1" style="width: 90%;">
-                <h1 id="comicfont" style="font-family: 'Comic Sans MS';text-align: center;font-size: calc(30% + 1vw + 1vh);">
-                  Though you may not have realized it then,<br>You faced a fork in the road.<br>One path was easy.<br>The other unclear.<br>
-                </h1>
-                <button class="narrowImg" id="D2"   role="button" (click)="onClickMP3()"></button>
-            </div>
-            </div>
-            <div id="arrow" class="rownav">
-                <div class="colleft">
-                    <h1 style="text-align: right;font-family: 'Century Gothic';font-size: calc(30% + 1vw + 1vh);margin-top: 9px;">&nbsp;</h1>
-                </div>
-                <div class="colright">
-                      
-                </div>
-            </div>
+        <div style="height: 45vh;">
+            <h1 class="date" style="font-family: 'Century Gothic';text-align: center;font-size: calc(100% + 3vw + 3vh);">
+                {{eventDate}}</h1>
+            <h1 class="time" style="font-family: 'Comic Sans MS';transform: rotate(-7deg);text-align: center;font-size: calc(100% + 2vw);margin-top: calc(0.5% + 1vw + 1vh);">
+              &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {{eventTime}}</h1>
         </div>
-          <!-- PAge 3 -->
-        <div id="MP3" *ngIf="MP3 == true">
-            <div class="d-flex justify-content-center align-items-center" style="height: calc(55vh + 14vw);">
-                <div id="tlay-1" style="width: 90%;">
-                <h1 id="comicfont-2" style="font-family: 'Comic Sans MS';text-align: center;font-size: calc(30% + 1vw + 1vh);color: rgb(33, 37, 41);">
-                  You made a choice.<br>And.<br>That choice is the true reason you are here.<br>It is why you are special.<br>It is why you received a key.<br></h1>
-                  <button class="narrowImg" id="D2"  role="button" (click)="onClickMP4()"></button>
-                </div>
-                </div>
-            <div id="arrow-2" class="rownav">
-                <div class="colleft">
-                    <h1 style="text-align: right;font-family: 'Century Gothic';font-size: calc(30% + 1vw + 1vh);margin-top: 9px;">&nbsp;</h1>
-                </div>
-                <div class="colright">
-    
-              </div>
-            </div>
+        <div class="d-flex d-lg-flex justify-content-center align-items-end justify-content-lg-center align-items-lg-end" style="height: 25vh;width: 50%;">
+        <button class="narrowImg" id="More" style="width: calc(15vh + 5vw);" alt="..."></button>
         </div>
-          <!-- PAge 4 -->
-        <div id="MP4" *ngIf="MP4 == true">
-            <div class="container-fluid d-none d-sm-none d-md-block" style="margin-left: 0px;">
-                <div class="row">
-                    <div class="col-md-6 d-flex flex-fill justify-content-center align-items-center" style="background: #000000;height: 10vh;">
-                        <div style="width: 90%;"></div>
-                    </div>
-                    <div class="col d-flex justify-content-center align-items-center align-self-center" style="width: 2%;height: 10vh;">
-                        <p style="text-align: center;"></p>
-                    </div>
-                    <div class="col-md-5 d-flex flex-fill justify-content-center align-items-center" style="background: rgba(255,255,255,0);height: 10vh;">
-                        <div style="width: 90%;"></div>
-                    </div>
+        <div class="container-fluid" style="margin-top: 10vh;margin-bottom: 5vh;">
+            <div class="row">
+                <div class="col-md-6" style="color: rgb(255,255,255);width: 20%;">
+                    <div></div>
                 </div>
-            </div>
-            <div class="container-fluid" style="margin: -23px;margin-left: 0px;padding-bottom: 1px;">
-                <div class="row">
-                    <div class="col-md-6 d-flex flex-fill justify-content-center align-items-center" style="background: #000000;height: 50vh;">
-                        <div id="tlay-1" style="width: 90%;">
-                            <h1 style="font-family: 'Century Gothic';color: rgb(255,255,255);text-align: center;font-size: calc(50% + 1vw + 1vh);">
-                              You notice a glimmer to the key.<br>You feel it hum in your hands.<br>“Why??”<br><br>
-                          </h1>
-                          <button class="narrowImg" id="D1"   role="button" (click)="onClickMP4D1()"></button>
-                        </div>
-                    </div>
-                    <div class="col d-flex justify-content-center align-items-center align-self-center" style="width: 2%;height: 203px;">
-                        <p style="text-align: center;">
-                          <button class="orBox justify-content-center"  alt="..."></button>
-                        </p>
-                    </div>
-                    <div class="col-md-5 d-flex flex-fill justify-content-center align-items-center" style="background: rgba(255,255,255,0);height: 50vh;">
-                        <div id="tlay-2" style="width: 90%;">
-                            <h1 class="text-center" style="font-family: 'Century Gothic';color: rgb(0,0,0);text-align: center;font-size: calc(50% + 1vw + 1vh);">
-                              A voice in your head says,<br>“This key is important.<br>Something tells me it must be dealt with immediately…”<br><br>
-                            </h1>
-                            <button class="narrowImg" id="D2"  role="button" (click)="onClickMP4L1()"></button>
-        
-        
-        
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="container-fluid d-none d-sm-none d-md-block" style="margin-left: 0px;">
-                <div class="row">
-                    <div class="col-md-6 d-flex flex-fill justify-content-center align-items-center" style="background: #000000;height: 50vh;">
-                        <div style="width: 90%;"></div>
-                    </div>
-                    <div class="col d-flex justify-content-center align-items-center align-self-center" style="width: 2%;height: 23px;">
-                        <p style="text-align: center;"></p>
-                    </div>
-                    <div class="col-md-5 d-flex flex-fill justify-content-center align-items-center" style="background: rgba(255,255,255,0);height: 50vh;">
-                        <div style="width: 90%;"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-          <!-- PAge 2 -->
-        <div id="MP4D1" *ngIf="MP4D1 == true">
-            <div class="d-flex justify-content-center align-items-center"  style="height: calc(55vh + 14vw);">
-                <div id="tlay-1" style="width: 90%;">
-                <h1 id="comicfont-3" style="font-family: 'Comic Sans MS';text-align: center;font-size: calc(30% + 1vw + 1vh);color: rgb(255,255,255);">
-                  To the average person,
-                  <br>The key you hold looks ordinary.
-                  <br>Something to ignore.
-                  <br>But.
-                  <br>You’re not average.
-                  <br>And.
-                  <br>It’s not ordinary.
-                  <br>
-                </h1>
-                <button class="narrowImg" id="D1"   (click)="onClickMP4D2()" alt="..." ></button>
-            </div>
-        </div>
-            <div id="arrow-3" class="rownav">
-                <div class="colleft">
-                    <h1 style="text-align: right;font-family: 'Century Gothic';font-size: calc(30% + 1vw + 1vh);margin-top: 9px;">&nbsp;</h1>
-                </div>
-                <div class="colright">
-        
-    
-        
-                </div>
-            </div>
-        </div>
-        <div id="MP4D2" *ngIf="MP4D2 == true">
-            <div class="d-flex justify-content-center align-items-center" style="height: calc(55vh + 14vw);">
-                <div id="tlay-1" style="width: 90%;">
-                <h1 id="comicfont-4" style="font-family: 'Comic Sans MS';text-align: center;font-size: calc(30% + 1vw + 1vh);color: rgb(255,255,255);">
-                  A key that comes alive.<br>In the hands of someone with a unique Eye.<br>Someone with Vision.<br></h1>
-                  <button class="narrowImg" id="D1" (click)="onClickMP4D3()" alt="..." ></button>
-    
-            </div>
-        </div>
-            <div id="arrow-4" class="rownav">
-                <div class="colleft">
-                    <h1 style="text-align: right;font-family: 'Century Gothic';font-size: calc(30% + 1vw + 1vh);margin-top: 9px;">&nbsp;</h1>
-                </div>
-                <div class="colright">
-        
-              </div>
-            </div>
-        </div>
-        <div id="MP4D3" *ngIf="MP4D3 == true">
-            <div class="d-flex justify-content-center align-items-center" style="height: calc(55vh + 14vw);">
-                <div id="tlay-1" style="width: 90%;">
-    
-                <h1 id="comicfont-5" style="font-family: 'Comic Sans MS';text-align: center;font-size: calc(30% + 1vw + 1vh);color: rgb(255,255,255);">
-                  With the key active and in your possession,
-                  <br>You gain the power to determine the future.
-                  <br>The opportunity to enter The Waiting Place.
-                  <br>To learn its powerful secrets.
-                </h1>
-                <button class="narrowImg" id="D1"  role="button" (click)="onClickMP4D4()" alt="..." ></button>
-            </div>
-            </div>
-            <div id="arrow-5" class="rownav">
-                <div class="colleft">
-                    <h1 style="text-align: right;font-family: 'Century Gothic';font-size: calc(30% + 1vw + 1vh);margin-top: 9px;">&nbsp;</h1>
-                </div>
-                <div class="colright">
-        
-              </div>
-            </div>
-        </div>
-        <div id="MP4D4" *ngIf="MP4D4 == true">
-            <div class="container-fluid d-none d-sm-none d-md-block" style="margin-left: 0px;">
-                <div class="row">
-                    <div class="col-md-6 d-flex flex-fill justify-content-center align-items-center" style="background: #000000;height: 10vh;">
-                        <div style="width: 90%;"></div>
-                    </div>
-                    <div class="col d-flex justify-content-center align-items-center align-self-center" style="width: 2%;height: 10vh;">
-                        <p style="text-align: center;"></p>
-                    </div>
-                    <div class="col-md-5 d-flex flex-fill justify-content-center align-items-center" style="background: rgba(255,255,255,0);height: 10vh;">
-                        <div style="width: 90%;"></div>
-                    </div>
-                </div>
-            </div>
-            <div class="container-fluid" style="margin: -23px;margin-left: 0px;padding-bottom: 1px;">
-                <div class="row">
-                    <div class="col-md-6 d-flex flex-fill justify-content-center align-items-center" style="background: #000000;height: 50vh;">
-                        <div id="tlay-3" style="width: 90%;">
-                            <h1 style="font-family: 'Century Gothic';color: rgb(255,255,255);text-align: center;font-size: calc(50% + 1vw + 1vh);">
-                              “Wait.<br>What is The Waiting Place?”<br></h1>
-                              <button class="narrowImg" id="D1"  role="button" (click)="onClickMP4D4P1()" alt="..." ></button>
-                          </div>
-                    </div>
-                    <div class="col d-flex justify-content-center align-items-center align-self-center" style="width: 2%;height: 23px;">
-                        <p style="text-align: center;">
-                            <button class="orBox justify-content-center"  alt="..."></button>
-                        </p>
-                    </div>
-                    <div class="col-md-5 d-flex flex-fill justify-content-center align-items-center" style="background: rgb(0,0,0);height: 50vh;">
-                        <div id="tlay-4" style="width: 90%;">
-                            <h1 class="text-center" style="font-family: 'Century Gothic';color: rgb(255,255,255);text-align: center;font-size: calc(50% + 1vw + 1vh);">
-                              “Am I Alone”<br>
-                          </h1>
-                          <button class="narrowImg" id="D1"  role="button" (click)="onClickMP4D4P2()" alt="..." ></button>
-        
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="container-fluid d-none d-sm-none d-md-block" style="margin-left: 0px;background: #000000;">
-                <div class="row">
-                    <div class="col-md-6 d-flex flex-fill justify-content-center align-items-center" style="background: #000000;height: 50vh;">
-                        <div style="width: 90%;"></div>
-                    </div>
-                    <div class="col d-flex justify-content-center align-items-center align-self-center" style="width: 2%;height: 23px;">
-                        <p style="text-align: center;"></p>
-                    </div>
-                    <div class="col-md-5 d-flex flex-fill justify-content-center align-items-center" style="background: rgba(255,255,255,0);height: 50vh;">
-                        <div style="width: 90%;"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div id="MP4D4P1" *ngIf="MP4D4P1 == true">
-            <div class="d-flex justify-content-center align-items-center" style="height: calc(55vh + 14vw);background: #000000;">
-                <div id="tlay-1" style="width: 90%;">
-    
-                <h1 id="comicfont-6" style="font-family: 'Comic Sans MS';text-align: center;font-size: calc(30% + 1vw + 1vh);color: rgb(255,255,255);">
-                  You will learn more about this place soon.<br>But.<br>There is something pressing you must know first.<br></h1>
-                  <button class="narrowImg" id="D1"  role="button" (click)="onClickMP4D4P2()" alt="..." ></button>
-    
-                </div>
-        </div>
-            <div id="arrow-6" class="rownav" style="background: #000000;">
-                <div class="colleft">
-                    <h1 style="text-align: right;font-family: 'Century Gothic';font-size: calc(30% + 1vw + 1vh);margin-top: 9px;">&nbsp;</h1>
-                </div>
-                <div class="colright">
-              </div>
-            </div>
-        </div>
-        <div id="MP4D4P2" *ngIf="MP4D4P2 == true">
-            <div class="d-flex justify-content-center align-items-center" style="height: calc(55vh + 14vw);background: #000000;">
-                <div id="tlay-1" style="width: 90%;">
-    
-                <h1 id="comicfont-7" style="font-family: 'Comic Sans MS';text-align: center;font-size: calc(30% + 1vw + 1vh);color: rgb(255,255,255);">
-                  The power of the key cannot be hoarded.
-                  <br>It’s bound to others,
-                  <br>And to something greater.
-                  <br></h1>
-                  <button class="narrowImg" id="D1"   role="button" (click)="onClickMP4D4P3()" alt="..." ></button>
-                </div>
-            </div>
-            <div id="arrow-7" class="rownav" style="background: #000000;">
-                <div class="colleft">
-                    <h1 style="text-align: right;font-family: 'Century Gothic';font-size: calc(30% + 1vw + 1vh);margin-top: 9px;">&nbsp;</h1>
-                </div>
-                <div class="colright">
-                </div>
-            </div>
-        </div>
-        <div id="MP4D4P3" *ngIf="MP4D4P3 == true">
-            <div class="d-flex justify-content-center align-items-center" style="height: calc(55vh + 14vw);">
-                <div id="tlay-1" style="width: 90%;">
-    
-                <h1 id="comicfont-8" style="font-family: 'Comic Sans MS';text-align: center;font-size: calc(30% + 1vw + 1vh);color: rgb(255,255,255);">
-                  Should you avoid making the decision.
-                  <br>The key’s power may fade.
-                  <br>
-                  <br>You were invited by someone,
-                  <br>Who considers you trustworthy.
-                  <br>Your Master Key holder.
-                  <br>If you decline.
-                  <br>All their keys may be put at risk.
-                  <br>There is a number that must accept.
-                  <br>Or.
-                  <br>The Keys may move on.
-                  <br></h1>
-                  <button class="narrowImg" id="D1"  role="button" (click)="onClicklastPage()" alt="..." ></button>
-    
-                </div>
-            </div>
-            <div id="arrow-8" class="rownav">
-                <div class="colleft">
-                    <h1 style="color: rgb(255,255,255); text-align: right;font-family: 'Century Gothic';font-size: calc(30% + 1vw + 1vh);margin-top: 9px;">“Got it. But you’re going to have to tell me what The Waiting Place is.”
+                <div class="col-md-6" style="background: #000000;width: 80%;">
+                    <h1 style="font-family: beloved-sans;color: rgb(255,255,255);margin-top: 3%;margin-bottom: 1%;margin-left: 3%;font-size: calc(100% + 4vw);">
+                    <strong>The Waiting Place.</strong>
                     </h1>
                 </div>
-                <div class="colright">
-                  <a href="javascript:SwapDivsWithClick('MP4D4P3','MP4D4P4')">
-                  </a>
+            </div>
+        </div>
+        <h1 style="font-family: 'Century Gothic';text-align: center;font-size: calc(40% + 2vw + 1vh);">A place some have heard of,<br>But few have found.</h1>
+        <div class="container-fluid" style="margin-top: 3%;">
+            <div class="row">
+                <div class="col-md-6" style="color: rgb(255,255,255);width: 40%;border-bottom: 2px solid rgb(0,0,0) ;">
+                    <h1 style="font-family: beloved-sans;color: rgb(0,0,0);margin-top: 3%;margin-bottom: 1%;margin-left: 3%;text-align: right;"><strong>Rumors.</strong></h1>
+                </div>
+                <div class="col-md-6" style="background: rgba(255,255,255,0);width: 60%;">
+                    <div></div>
                 </div>
             </div>
         </div>
-        <div id="MP4L1" *ngIf="MP4L1 == true">
-            <div class="d-flex justify-content-center align-items-center" style="height: calc(55vh + 14vw);">
-                <div id="tlay-1" style="width: 90%;">
-                <h1 id="comicfont-10" style="font-family: 'Comic Sans MS';text-align: center;font-size: calc(30% + 1vw + 1vh);color: rgb(33,37,41);">
-                  This key is an invitation to The Waiting Place.
-                  <br>You were hand-selected.
-                  <br>You are needed for what is to come.<br></h1>
-                  <button class="narrowImg" id="D2"   role="button" (click)="onClickMP4L2()" alt="..." ></button>
+        <div class="d-flex d-lg-flex hyper" id="blockcenter" style="height: 100%;max-width: 1080px;">
+        <button class="d-lg-flex Block1" usemap="#workmap"></button><a id="blockcenter" href="https://www.dinerenblanc.com/" alt="..." target="_tab1" style="top: 22%; left: 40%; width: 17%; height: 8%;">
+        </a>
+        </div>
+        <div id="blockcenter" style="height: 100%;max-width: 1080px;">
+        <button class="Block2" style="width: 100%;" alt="..."></button>
+        </div>
+        <div id="blockcenter" class="hyper" style="height: 100%;max-width: 1080px;">
+        <button class="Block3"style="width: 100%;"></button>
+        <a id="blockcenter" href="#" target="_tab2" style="top: 17%; left: 48%; width: 22%; height: 11%;"></a>
+        </div>
+        <div id="blockcenter" class="hyper" style="height: 100%;max-width: 1080px;">
+        <button class="Block4" style="width: 100%;"></button>
+        </div>
+        <div class="container-fluid" style="margin-top: 2%;" alt="...">
+            <div class="row">
+                <div class="col-md-6" style="background: rgba(255,255,255,0);width: 60%;">
+                    <div></div>
                 </div>
-                </div>
-            <div id="arrow-10" class="rownav">
-                <div class="colleft">
-                    <h1 style="text-align: right;font-family: 'Century Gothic';font-size: calc(30% + 1vw + 1vh);margin-top: 9px;">"What is The Waiting Place?”&nbsp;</h1>
-                </div>
-                <div class="colright">
-        
+                <div class="col-md-6" style="color: rgb(255,255,255);width: 40%;border-bottom: 2px solid rgb(0,0,0) ;">
+                    <h1 style="font-family: beloved-sans;color: rgb(0,0,0);margin-top: 3%;margin-bottom: 1%;margin-left: 3%;text-align: left;"><strong>Guests.</strong></h1>
                 </div>
             </div>
         </div>
-        <div id="MP4L2" *ngIf="MP4L2 == true">
-            <div class="d-flex justify-content-center align-items-center" style="height: calc(55vh + 14vw);">
-                <div id="tlay-1" style="width: 90%;">
-                <h1 id="comicfont-11" style="font-family: 'Comic Sans MS';text-align: center;font-size: calc(30% + 1vw + 1vh);color: rgb(33,37,41);">
-                    Your key is bound to others.
-                  <br>To those chosen by your Master Key holder.
-                  <br>
-                  <br>If you decline.
-                  <br>All your team’s invitations may be at risk.
-                  <br>
-                  <br>There is a number that must accept.
-                  <br></h1>
-                  <button class="narrowImg" id="D2"  role="button" (click)="onClickMP4L3()" alt="..." ></button>
-                </div>    
-            </div>
-            <div id="arrow-11" class="rownav">
-                <div class="colleft">
-                    <h1 style="text-align: right;font-family: 'Century Gothic';font-size: calc(30% + 1vw + 1vh);margin-top: 9px;margin-right: 6px;">“Okay.&nbsp;But but I’m not making any decision until you tell me: <br>What is The Waiting Place?”&nbsp;</h1>
+        <div id="blockcenter" style="height: 100%;max-width: 1080px;">
+        <button class="GuestBlock"  style="width: 100%;" alt="..."></button>
+        </div>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-9 col-sm-8 col-md-7" style="color: rgb(255,255,255);border-bottom: 2px solid rgb(0,0,0);">
+                    <h1 style="font-family: beloved-sans;color: rgb(0,0,0);margin-top: 3%;margin-bottom: 1%;margin-left: 3%;text-align: right;"><strong>Skin In The Game.</strong></h1>
                 </div>
-                <div class="colright">
+                <div class="col" style="background: rgba(255,255,255,0);">
+                    <div></div>
                 </div>
             </div>
         </div>
-        <div id="MP4L3" *ngIf="MP4L3 == true">
-            <div class="d-flex justify-content-center align-items-center" style="height: calc(55vh + 14vw);">
-                <div id="tlay-1" style="width: 90%;">
-                <h1 id="comicfont-12" style="font-family: 'Comic Sans MS';text-align: center;font-size: calc(30% + 1vw + 1vh);color: rgb(33,37,41);">
-                    The Keys must find their match.
-                    <br>Those with initiative and heart
-
-                  <br></h1>
-                  <button class="narrowImg" id="D2"   role="button" (click)="onClicklastPage()" alt="..." ></button>
-                </div>
+        <div id="blockcenter" style="height: 100%;max-width: 1080px;">
+        <button class="SkinBlock"  style="width: 100%;" alt="..."></button>
+            <div style="margin-left: 9%;">
+                <p style="font-family: 'Comic Sans MS';font-size: min(2.5vw, 30px);">Need help covering the fee?<br><a href="{{payLink}}" style="color: rgb(0,0,0);font-family: 'Comic Sans MS';">Let us know.</a><br>And.<br>If you walk away from the evening,<br>Less than delighted,<br>We'll give you your money back.</p>
             </div>
-            <div id="arrow-12" class="rownav">
-                <div class="colleft">
-                    <h1 style="text-align: right;font-family: 'Century Gothic';font-size: calc(30% + 1vw + 1vh);margin-top: 9px;">“Seriously. What is The Waiting Place!?”&nbsp;</h1>
+        </div>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-6" style="background: rgba(255,255,255,0);width: 30%;">
+                    <div></div>
                 </div>
-                <div class="colright">
+                <div class="col-md-6" style="color: rgb(255,255,255);width: 70%;border-bottom: 2px solid rgb(0,0,0);">
+                    <h1 style="font-family: beloved-sans;color: rgb(0,0,0);margin-top: 3%;margin-bottom: 1%;margin-left: 3%;text-align: left;"><strong>The Organizers.</strong></h1>
                 </div>
             </div>
         </div>
-        <!-- <script type="text/javascript">
-        function SwapDivsWithClick(div1,div2)
-        {
-        d1 = document.getElementById(div1);
-        d2 = document.getElementById(div2);
-        if( d2.style.display == "none" )
-        {
-          d1.style.display = "none";
-          d2.style.display = "block";
-        }
-        else
-        {
-          d1.style.display = "block";
-          d2.style.display = "none";
-        }
-        }
-        </script> -->
-        
-        
-        
-        <script src="assets/bootstrap/js/bootstrap.min.js"></script>
-        <script src="assets/js/fonts.js"></script>
-        <script src="assets/js/images.js"></script>
-        <script src="assets/js/kholder.js"></script>
-        
-        
-        
-        
-        <div id="lastPage" *ngIf="lastPage == true">
-          <div class="d-flex d-lg-flex align-items-md-start justify-content-lg-start align-items-lg-start" style="height: 30vh;">
-          <button class="d-lg-flex justify-content-lg-center"
-          class="narrowImg A1"
-            alt="..." style="margin-left: 1%;margin-top: 1%;height: calc(5vh + 1.5vw);"></button>
-          </div>
-          <div style="height: 45vh;">
-              <h1 class="date" style="font-family: 'Century Gothic';text-align: center;font-size: calc(100% + 3vw + 3vh);">
-                February 8th</h1>
-              <h1 class="time" style="font-family: 'Comic Sans MS';transform: rotate(-7deg);text-align: center;font-size: calc(100% + 2vw);margin-top: calc(0.5% + 1vw + 1vh);">
-                &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 3 PM</h1>
-          </div>
-          <div class="d-flex d-lg-flex justify-content-center align-items-end justify-content-lg-center align-items-lg-end" style="height: 25vh;width: 50%;">
-          <button class="narrowImg" id="More" style="width: calc(15vh + 5vw);" alt="..."></button>
-          </div>
-          <div class="container-fluid" style="margin-top: 10vh;margin-bottom: 5vh;">
-              <div class="row">
-                  <div class="col-md-6" style="color: rgb(255,255,255);width: 20%;">
-                      <div></div>
+        <div id="blockcenter" style="height: 100%;max-width: 1080px;">
+        <button class="OrgBlok" style="width: 100%;margin-bottom: -7.5%;" alt="..."></button>
+        </div>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-6" style="color: rgb(255,255,255);width: 40%;border-bottom: 2px solid rgb(0,0,0) ;">
+                    <h1 style="font-family: beloved-sans;color: rgb(0,0,0);margin-top: 3%;margin-bottom: 1%;margin-left: 3%;text-align: right;"><strong>Location.</strong></h1>
+                </div>
+                <div class="col-md-6" style="background: rgba(255,255,255,0);width: 60%;">
+                    <div></div>
+                </div>
+            </div>
+        </div>
+        <div id="blockcenter" style="height: 100%;max-width: 1080px;">
+        <button class="LocaBlock"  style="width: 100%;" alt="..."></button>
+        </div>
+        <div class="container-fluid" style="margin-top: -3%;">
+            <div class="row">
+                <div class="col-md-6" style="background: rgba(255,255,255,0);width: 20%;">
+                    <div></div>
+                </div>
+                <div class="col-md-6" style="color: rgb(255,255,255);width: 80%;border-bottom: 2px solid rgb(0,0,0);">
+                    <h1 style="font-family: beloved-sans;color: rgb(0,0,0);margin-top: 3%;margin-bottom: 1%;margin-left: 3%;text-align: right;"><br></h1>
+                </div>
+            </div>
+        </div>
+        <div>
+            <h1 style="font-family: 'Comic Sans MS';font-size: calc(30% + 1vh + 1vw);text-align: center;line-height: 160%;"><br><br>You have more questions.<br>You want more details.<br>Answers will come.<br>Before you travel.<br>Before you pay your stake.<br><br>But.<br>For Now.<br>We have shared all we can.<br>to tell you more.<br>we must be certain.<br>the keys are in the right hands.</h1>
+        </div>
+        <div class="container-fluid" style="margin-top: calc(10% + 1vw + 1vh);">
+            <div class="row">
+                <div class="col-md-6" style="background: #000000;width: 50%;">
+                    <h1 style="font-family: beloved-sans;color: rgb(255,255,255);margin-top: 3%;margin-bottom: 1%;margin-left: 3%;text-align: right;"><strong>Next Step.</strong></h1>
+                </div>
+                <div class="col-md-6" style="color: rgb(255,255,255);width: 50%;">
+                    <div></div>
+                </div>
+            </div>
+        </div>
+        <div class="d-flex justify-content-center align-items-center" id="blockcenter" style="height: 100%;max-width: 1080px;">
+        <button class="NextBlock" style="width: 90%;"  alt="..."></button>
+        </div>
+      
+        <div class="d-flex d-lg-flex justify-content-end justify-content-lg-end" id="floater">
+        <a href="{{masterButtonLink}}">
+            <button class="button"  style="height: calc(10vh + 4vw);"></button>
+        </a>
+        </div>
+      </div>
+      </div>
+  
+      <!-- Guest Path -->
+  <div *ngIf="pathSelect == 'G'">
+          <!-- Page 1 -->
+          <div id="MP1" *ngIf="MP1 == true">
+              <div class="d-flex justify-content-center align-items-center" style="height: 50vh;">
+                  <div id="tlay-1" style="width: 90%;">
+                      <h1 id="comicfont" style="font-family: 'Comic Sans MS';text-align: center;font-size: calc(30% + 1vw + 1vh);">
+                          A key led you here.<br>But.<br>The wheels were set in motion long before that.<br>They started to turn at a time in your past.<br>A moment when you made a decision.<br>
+                      </h1>
+                      <button class="narrowImg" id="D2"  role="button" (click)="onClickMP2()"></button>
                   </div>
-                  <div class="col-md-6" style="background: #000000;width: 80%;">
-                      <h1 style="font-family: beloved-sans;color: rgb(255,255,255);margin-top: 3%;margin-bottom: 1%;margin-left: 3%;font-size: calc(100% + 4vw);">
-                      <strong>The Waiting Place.</strong>
+              </div>
+              <div id="arrow-1" class="rownav">
+                  <div class="colleft">
+                      <h1 style="text-align: right;font-family: 'Century Gothic';font-size: calc(30% + 1vw + 1vh);margin-top: 9px;">&nbsp;</h1>
+                  </div>
+                  <div class="colright">
+                    
+                  </div>
+              </div>
+          </div>
+          
+          <!-- PAge 2 -->
+          <div *ngIf="MP2 == true" id="MP2">
+              <div class="d-flex justify-content-center align-items-center" style="height: calc(55vh + 14vw);">
+                  <div id="tlay-1" style="width: 90%;">
+                  <h1 id="comicfont" style="font-family: 'Comic Sans MS';text-align: center;font-size: calc(30% + 1vw + 1vh);">
+                    Though you may not have realized it then,<br>You faced a fork in the road.<br>One path was easy.<br>The other unclear.<br>
+                  </h1>
+                  <button class="narrowImg" id="D2"   role="button" (click)="onClickMP3()"></button>
+              </div>
+              </div>
+              <div id="arrow" class="rownav">
+                  <div class="colleft">
+                      <h1 style="text-align: right;font-family: 'Century Gothic';font-size: calc(30% + 1vw + 1vh);margin-top: 9px;">&nbsp;</h1>
+                  </div>
+                  <div class="colright">
+                        
+                  </div>
+              </div>
+          </div>
+            <!-- PAge 3 -->
+          <div id="MP3" *ngIf="MP3 == true">
+              <div class="d-flex justify-content-center align-items-center" style="height: calc(55vh + 14vw);">
+                  <div id="tlay-1" style="width: 90%;">
+                  <h1 id="comicfont-2" style="font-family: 'Comic Sans MS';text-align: center;font-size: calc(30% + 1vw + 1vh);color: rgb(33, 37, 41);">
+                    You made a choice.<br>And.<br>That choice is the true reason you are here.<br>It is why you are special.<br>It is why you received a key.<br></h1>
+                    <button class="narrowImg" id="D2"  role="button" (click)="onClickMP4()"></button>
+                  </div>
+                  </div>
+              <div id="arrow-2" class="rownav">
+                  <div class="colleft">
+                      <h1 style="text-align: right;font-family: 'Century Gothic';font-size: calc(30% + 1vw + 1vh);margin-top: 9px;">&nbsp;</h1>
+                  </div>
+                  <div class="colright">
+      
+                </div>
+              </div>
+          </div>
+            <!-- PAge 4 -->
+          <div id="MP4" *ngIf="MP4 == true">
+              <div class="container-fluid d-none d-sm-none d-md-block" style="margin-left: 0px;">
+                  <div class="row">
+                      <div class="col-md-6 d-flex flex-fill justify-content-center align-items-center" style="background: #000000;height: 10vh;">
+                          <div style="width: 90%;"></div>
+                      </div>
+                      <div class="col d-flex justify-content-center align-items-center align-self-center" style="width: 2%;height: 10vh;">
+                          <p style="text-align: center;"></p>
+                      </div>
+                      <div class="col-md-5 d-flex flex-fill justify-content-center align-items-center" style="background: rgba(255,255,255,0);height: 10vh;">
+                          <div style="width: 90%;"></div>
+                      </div>
+                  </div>
+              </div>
+              <div class="container-fluid" style="margin: -23px;margin-left: 0px;padding-bottom: 1px;">
+                  <div class="row">
+                      <div class="col-md-6 d-flex flex-fill justify-content-center align-items-center" style="background: #000000;height: 50vh;">
+                          <div id="tlay-1" style="width: 90%;">
+                              <h1 style="font-family: 'Century Gothic';color: rgb(255,255,255);text-align: center;font-size: calc(50% + 1vw + 1vh);">
+                                You notice a glimmer to the key.<br>You feel it hum in your hands.<br>“Why??”<br><br>
+                            </h1>
+                            <button class="narrowImg" id="D1"   role="button" (click)="onClickMP4D1()"></button>
+                          </div>
+                      </div>
+                      <div class="col d-flex justify-content-center align-items-center align-self-center" style="width: 2%;height: 203px;">
+                          <p style="text-align: center;">
+                            <button class="orBox justify-content-center"  alt="..."></button>
+                          </p>
+                      </div>
+                      <div class="col-md-5 d-flex flex-fill justify-content-center align-items-center" style="background: rgba(255,255,255,0);height: 50vh;">
+                          <div id="tlay-2" style="width: 90%;">
+                              <h1 class="text-center" style="font-family: 'Century Gothic';color: rgb(0,0,0);text-align: center;font-size: calc(50% + 1vw + 1vh);">
+                                A voice in your head says,<br>“This key is important.<br>Something tells me it must be dealt with immediately…”<br><br>
+                              </h1>
+                              <button class="narrowImg" id="D2"  role="button" (click)="onClickMP4L1()"></button>
+          
+          
+          
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="container-fluid d-none d-sm-none d-md-block" style="margin-left: 0px;">
+                  <div class="row">
+                      <div class="col-md-6 d-flex flex-fill justify-content-center align-items-center" style="background: #000000;height: 50vh;">
+                          <div style="width: 90%;"></div>
+                      </div>
+                      <div class="col d-flex justify-content-center align-items-center align-self-center" style="width: 2%;height: 23px;">
+                          <p style="text-align: center;"></p>
+                      </div>
+                      <div class="col-md-5 d-flex flex-fill justify-content-center align-items-center" style="background: rgba(255,255,255,0);height: 50vh;">
+                          <div style="width: 90%;"></div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+            <!-- PAge 2 -->
+          <div id="MP4D1" *ngIf="MP4D1 == true">
+              <div class="d-flex justify-content-center align-items-center"  style="height: calc(55vh + 14vw);">
+                  <div id="tlay-1" style="width: 90%;">
+                  <h1 id="comicfont-3" style="font-family: 'Comic Sans MS';text-align: center;font-size: calc(30% + 1vw + 1vh);color: rgb(255,255,255);">
+                    To the average person,
+                    <br>The key you hold looks ordinary.
+                    <br>Something to ignore.
+                    <br>But.
+                    <br>You’re not average.
+                    <br>And.
+                    <br>It’s not ordinary.
+                    <br>
+                  </h1>
+                  <button class="narrowImg" id="D1"   (click)="onClickMP4D2()" alt="..." ></button>
+              </div>
+          </div>
+              <div id="arrow-3" class="rownav">
+                  <div class="colleft">
+                      <h1 style="text-align: right;font-family: 'Century Gothic';font-size: calc(30% + 1vw + 1vh);margin-top: 9px;">&nbsp;</h1>
+                  </div>
+                  <div class="colright">
+          
+      
+          
+                  </div>
+              </div>
+          </div>
+          <div id="MP4D2" *ngIf="MP4D2 == true">
+              <div class="d-flex justify-content-center align-items-center" style="height: calc(55vh + 14vw);">
+                  <div id="tlay-1" style="width: 90%;">
+                  <h1 id="comicfont-4" style="font-family: 'Comic Sans MS';text-align: center;font-size: calc(30% + 1vw + 1vh);color: rgb(255,255,255);">
+                    A key that comes alive.<br>In the hands of someone with a unique Eye.<br>Someone with Vision.<br></h1>
+                    <button class="narrowImg" id="D1" (click)="onClickMP4D3()" alt="..." ></button>
+      
+              </div>
+          </div>
+              <div id="arrow-4" class="rownav">
+                  <div class="colleft">
+                      <h1 style="text-align: right;font-family: 'Century Gothic';font-size: calc(30% + 1vw + 1vh);margin-top: 9px;">&nbsp;</h1>
+                  </div>
+                  <div class="colright">
+          
+                </div>
+              </div>
+          </div>
+          <div id="MP4D3" *ngIf="MP4D3 == true">
+              <div class="d-flex justify-content-center align-items-center" style="height: calc(55vh + 14vw);">
+                  <div id="tlay-1" style="width: 90%;">
+      
+                  <h1 id="comicfont-5" style="font-family: 'Comic Sans MS';text-align: center;font-size: calc(30% + 1vw + 1vh);color: rgb(255,255,255);">
+                    With the key active and in your possession,
+                    <br>You gain the power to determine the future.
+                    <br>The opportunity to enter The Waiting Place.
+                    <br>To learn its powerful secrets.
+                  </h1>
+                  <button class="narrowImg" id="D1"  role="button" (click)="onClickMP4D4()" alt="..." ></button>
+              </div>
+              </div>
+              <div id="arrow-5" class="rownav">
+                  <div class="colleft">
+                      <h1 style="text-align: right;font-family: 'Century Gothic';font-size: calc(30% + 1vw + 1vh);margin-top: 9px;">&nbsp;</h1>
+                  </div>
+                  <div class="colright">
+          
+                </div>
+              </div>
+          </div>
+          <div id="MP4D4" *ngIf="MP4D4 == true">
+              <div class="container-fluid d-none d-sm-none d-md-block" style="margin-left: 0px;">
+                  <div class="row">
+                      <div class="col-md-6 d-flex flex-fill justify-content-center align-items-center" style="background: #000000;height: 10vh;">
+                          <div style="width: 90%;"></div>
+                      </div>
+                      <div class="col d-flex justify-content-center align-items-center align-self-center" style="width: 2%;height: 10vh;">
+                          <p style="text-align: center;"></p>
+                      </div>
+                      <div class="col-md-5 d-flex flex-fill justify-content-center align-items-center" style="background: rgba(255,255,255,0);height: 10vh;">
+                          <div style="width: 90%;"></div>
+                      </div>
+                  </div>
+              </div>
+              <div class="container-fluid" style="margin: -23px;margin-left: 0px;padding-bottom: 1px;">
+                  <div class="row">
+                      <div class="col-md-6 d-flex flex-fill justify-content-center align-items-center" style="background: #000000;height: 50vh;">
+                          <div id="tlay-3" style="width: 90%;">
+                              <h1 style="font-family: 'Century Gothic';color: rgb(255,255,255);text-align: center;font-size: calc(50% + 1vw + 1vh);">
+                                “Wait.<br>What is The Waiting Place?”<br></h1>
+                                <button class="narrowImg" id="D1"  role="button" (click)="onClickMP4D4P1()" alt="..." ></button>
+                            </div>
+                      </div>
+                      <div class="col d-flex justify-content-center align-items-center align-self-center" style="width: 2%;height: 23px;">
+                          <p style="text-align: center;">
+                              <button class="orBox justify-content-center"  alt="..."></button>
+                          </p>
+                      </div>
+                      <div class="col-md-5 d-flex flex-fill justify-content-center align-items-center" style="background: rgb(0,0,0);height: 50vh;">
+                          <div id="tlay-4" style="width: 90%;">
+                              <h1 class="text-center" style="font-family: 'Century Gothic';color: rgb(255,255,255);text-align: center;font-size: calc(50% + 1vw + 1vh);">
+                                “Am I Alone”<br>
+                            </h1>
+                            <button class="narrowImg" id="D1"  role="button" (click)="onClickMP4D4P2()" alt="..." ></button>
+          
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="container-fluid d-none d-sm-none d-md-block" style="margin-left: 0px;background: #000000;">
+                  <div class="row">
+                      <div class="col-md-6 d-flex flex-fill justify-content-center align-items-center" style="background: #000000;height: 50vh;">
+                          <div style="width: 90%;"></div>
+                      </div>
+                      <div class="col d-flex justify-content-center align-items-center align-self-center" style="width: 2%;height: 23px;">
+                          <p style="text-align: center;"></p>
+                      </div>
+                      <div class="col-md-5 d-flex flex-fill justify-content-center align-items-center" style="background: rgba(255,255,255,0);height: 50vh;">
+                          <div style="width: 90%;"></div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div id="MP4D4P1" *ngIf="MP4D4P1 == true">
+              <div class="d-flex justify-content-center align-items-center" style="height: calc(55vh + 14vw);background: #000000;">
+                  <div id="tlay-1" style="width: 90%;">
+      
+                  <h1 id="comicfont-6" style="font-family: 'Comic Sans MS';text-align: center;font-size: calc(30% + 1vw + 1vh);color: rgb(255,255,255);">
+                    You will learn more about this place soon.<br>But.<br>There is something pressing you must know first.<br></h1>
+                    <button class="narrowImg" id="D1"  role="button" (click)="onClickMP4D4P2()" alt="..." ></button>
+      
+                  </div>
+          </div>
+              <div id="arrow-6" class="rownav" style="background: #000000;">
+                  <div class="colleft">
+                      <h1 style="text-align: right;font-family: 'Century Gothic';font-size: calc(30% + 1vw + 1vh);margin-top: 9px;">&nbsp;</h1>
+                  </div>
+                  <div class="colright">
+                </div>
+              </div>
+          </div>
+          <div id="MP4D4P2" *ngIf="MP4D4P2 == true">
+              <div class="d-flex justify-content-center align-items-center" style="height: calc(55vh + 14vw);background: #000000;">
+                  <div id="tlay-1" style="width: 90%;">
+      
+                  <h1 id="comicfont-7" style="font-family: 'Comic Sans MS';text-align: center;font-size: calc(30% + 1vw + 1vh);color: rgb(255,255,255);">
+                    The power of the key cannot be hoarded.
+                    <br>It’s bound to others,
+                    <br>And to something greater.
+                    <br></h1>
+                    <button class="narrowImg" id="D1"   role="button" (click)="onClickMP4D4P3()" alt="..." ></button>
+                  </div>
+              </div>
+              <div id="arrow-7" class="rownav" style="background: #000000;">
+                  <div class="colleft">
+                      <h1 style="text-align: right;font-family: 'Century Gothic';font-size: calc(30% + 1vw + 1vh);margin-top: 9px;">&nbsp;</h1>
+                  </div>
+                  <div class="colright">
+                  </div>
+              </div>
+          </div>
+          <div id="MP4D4P3" *ngIf="MP4D4P3 == true">
+              <div class="d-flex justify-content-center align-items-center" style="height: calc(55vh + 14vw);">
+                  <div id="tlay-1" style="width: 90%;">
+      
+                  <h1 id="comicfont-8" style="font-family: 'Comic Sans MS';text-align: center;font-size: calc(30% + 1vw + 1vh);color: rgb(255,255,255);">
+                    Should you avoid making the decision.
+                    <br>The key’s power may fade.
+                    <br>
+                    <br>You were invited by someone,
+                    <br>Who considers you trustworthy.
+                    <br>Your Master Key holder.
+                    <br>If you decline.
+                    <br>All their keys may be put at risk.
+                    <br>There is a number that must accept.
+                    <br>Or.
+                    <br>The Keys may move on.
+                    <br></h1>
+                    <button class="narrowImg" id="D1"  role="button" (click)="onClicklastPage()" alt="..." ></button>
+      
+                  </div>
+              </div>
+              <div id="arrow-8" class="rownav">
+                  <div class="colleft">
+                      <h1 style="color: rgb(255,255,255); text-align: right;font-family: 'Century Gothic';font-size: calc(30% + 1vw + 1vh);margin-top: 9px;">“Got it. But you’re going to have to tell me what The Waiting Place is.”
                       </h1>
                   </div>
-              </div>
-          </div>
-          <h1 style="font-family: 'Century Gothic';text-align: center;font-size: calc(40% + 2vw + 1vh);">A place some have heard of,<br>But few have found.</h1>
-          <div class="container-fluid" style="margin-top: 3%;">
-              <div class="row">
-                  <div class="col-md-6" style="color: rgb(255,255,255);width: 40%;border-bottom: 2px solid rgb(0,0,0) ;">
-                      <h1 style="font-family: beloved-sans;color: rgb(0,0,0);margin-top: 3%;margin-bottom: 1%;margin-left: 3%;text-align: right;"><strong>Rumors.</strong></h1>
-                  </div>
-                  <div class="col-md-6" style="background: rgba(255,255,255,0);width: 60%;">
-                      <div></div>
+                  <div class="colright">
+                    <a href="javascript:SwapDivsWithClick('MP4D4P3','MP4D4P4')">
+                    </a>
                   </div>
               </div>
           </div>
-          <div class="d-flex d-lg-flex hyper" id="blockcenter" style="height: 100%;max-width: 1080px;">
-          <button class="d-lg-flex Block1" usemap="#workmap"></button><a id="blockcenter" href="https://www.dinerenblanc.com/" alt="..." target="_tab1" style="top: 22%; left: 40%; width: 17%; height: 8%;">
-          </a>
-          </div>
-          <div id="blockcenter" style="height: 100%;max-width: 1080px;">
-          <button class="Block2" style="width: 100%;" alt="..."></button>
-          </div>
-          <div id="blockcenter" class="hyper" style="height: 100%;max-width: 1080px;">
-          <button class="Block3"  style="width: 100%;"></button>
-          <a id="blockcenter" href="#" target="_tab2" style="top: 17%; left: 48%; width: 22%; height: 11%;"></a>
-          </div>
-          <div id="blockcenter" class="hyper" style="height: 100%;max-width: 1080px;">
-          <button class="Block4"  style="width: 100%;"></button>
-          </div>
-          <div class="container-fluid" style="margin-top: 2%;" alt="...">
-              <div class="row">
-                  <div class="col-md-6" style="background: rgba(255,255,255,0);width: 60%;">
-                      <div></div>
+          <div id="MP4L1" *ngIf="MP4L1 == true">
+              <div class="d-flex justify-content-center align-items-center" style="height: calc(55vh + 14vw);">
+                  <div id="tlay-1" style="width: 90%;">
+                  <h1 id="comicfont-10" style="font-family: 'Comic Sans MS';text-align: center;font-size: calc(30% + 1vw + 1vh);color: rgb(33,37,41);">
+                    This key is an invitation to The Waiting Place.
+                    <br>You were hand-selected.
+                    <br>You are needed for what is to come.<br></h1>
+                    <button class="narrowImg" id="D2"   role="button" (click)="onClickMP4L2()" alt="..." ></button>
                   </div>
-                  <div class="col-md-6" style="color: rgb(255,255,255);width: 40%;border-bottom: 2px solid rgb(0,0,0) ;">
-                      <h1 style="font-family: beloved-sans;color: rgb(0,0,0);margin-top: 3%;margin-bottom: 1%;margin-left: 3%;text-align: left;"><strong>Guests.</strong></h1>
+                  </div>
+              <div id="arrow-10" class="rownav">
+                  <div class="colleft">
+                      <h1 style="text-align: right;font-family: 'Century Gothic';font-size: calc(30% + 1vw + 1vh);margin-top: 9px;">"What is The Waiting Place?”&nbsp;</h1>
+                  </div>
+                  <div class="colright">
+          
                   </div>
               </div>
           </div>
-          <div id="blockcenter" style="height: 100%;max-width: 1080px;">
-          <button class="GuestBlock"  style="width: 100%;" alt="..."></button>
-          </div>
-          <div class="container-fluid">
-              <div class="row">
-                  <div class="col-9 col-sm-8 col-md-7" style="color: rgb(255,255,255);border-bottom: 2px solid rgb(0,0,0);">
-                      <h1 style="font-family: beloved-sans;color: rgb(0,0,0);margin-top: 3%;margin-bottom: 1%;margin-left: 3%;text-align: right;"><strong>Skin In The Game.</strong></h1>
+          <div id="MP4L2" *ngIf="MP4L2 == true">
+              <div class="d-flex justify-content-center align-items-center" style="height: calc(55vh + 14vw);">
+                  <div id="tlay-1" style="width: 90%;">
+                  <h1 id="comicfont-11" style="font-family: 'Comic Sans MS';text-align: center;font-size: calc(30% + 1vw + 1vh);color: rgb(33,37,41);">
+                      Your key is bound to others.
+                    <br>To those chosen by your Master Key holder.
+                    <br>
+                    <br>If you decline.
+                    <br>All your team’s invitations may be at risk.
+                    <br>
+                    <br>There is a number that must accept.
+                    <br></h1>
+                    <button class="narrowImg" id="D2"  role="button" (click)="onClickMP4L3()" alt="..." ></button>
+                  </div>    
+              </div>
+              <div id="arrow-11" class="rownav">
+                  <div class="colleft">
+                      <h1 style="text-align: right;font-family: 'Century Gothic';font-size: calc(30% + 1vw + 1vh);margin-top: 9px;margin-right: 6px;">“Okay.&nbsp;But but I’m not making any decision until you tell me: <br>What is The Waiting Place?”&nbsp;</h1>
                   </div>
-                  <div class="col" style="background: rgba(255,255,255,0);">
-                      <div></div>
+                  <div class="colright">
                   </div>
               </div>
           </div>
-          <div id="blockcenter" style="height: 100%;max-width: 1080px;">
-          <button class="SkinBlock"  style="width: 100%;" alt="..."></button>
-              <div style="margin-left: 9%;">
-                  <p style="font-family: 'Comic Sans MS';font-size: min(2.5vw, 30px);">Need help covering the fee?<br><a href="#contactfrm" style="color: rgb(0,0,0);font-family: 'Comic Sans MS';">Let us know.</a><br>And.<br>If you walk away from the evening,<br>Less than delighted,<br>We'll give you your money back.</p>
-              </div>
-          </div>
-          <div class="container-fluid">
-              <div class="row">
-                  <div class="col-md-6" style="background: rgba(255,255,255,0);width: 30%;">
-                      <div></div>
-                  </div>
-                  <div class="col-md-6" style="color: rgb(255,255,255);width: 70%;border-bottom: 2px solid rgb(0,0,0);">
-                      <h1 style="font-family: beloved-sans;color: rgb(0,0,0);margin-top: 3%;margin-bottom: 1%;margin-left: 3%;text-align: left;"><strong>The Organizers.</strong></h1>
+          <div id="MP4L3" *ngIf="MP4L3 == true">
+              <div class="d-flex justify-content-center align-items-center" style="height: calc(55vh + 14vw);">
+                  <div id="tlay-1" style="width: 90%;">
+                  <h1 id="comicfont-12" style="font-family: 'Comic Sans MS';text-align: center;font-size: calc(30% + 1vw + 1vh);color: rgb(33,37,41);">
+                      The Keys must find their match.
+                      <br>Those with initiative and heart
+  
+                    <br></h1>
+                    <button class="narrowImg" id="D2"   role="button" (click)="onClicklastPage()" alt="..." ></button>
                   </div>
               </div>
-          </div>
-          <div id="blockcenter" style="height: 100%;max-width: 1080px;">
-          <button class="OrgBlok"  style="width: 100%;margin-bottom: -7.5%;" alt="..."></button>
-          </div>
-          <div class="container-fluid">
-              <div class="row">
-                  <div class="col-md-6" style="color: rgb(255,255,255);width: 40%;border-bottom: 2px solid rgb(0,0,0) ;">
-                      <h1 style="font-family: beloved-sans;color: rgb(0,0,0);margin-top: 3%;margin-bottom: 1%;margin-left: 3%;text-align: right;"><strong>Location.</strong></h1>
+              <div id="arrow-12" class="rownav">
+                  <div class="colleft">
+                      <h1 style="text-align: right;font-family: 'Century Gothic';font-size: calc(30% + 1vw + 1vh);margin-top: 9px;">“Seriously. What is The Waiting Place!?”&nbsp;</h1>
                   </div>
-                  <div class="col-md-6" style="background: rgba(255,255,255,0);width: 60%;">
-                      <div></div>
+                  <div class="colright">
                   </div>
               </div>
           </div>
-          <div id="blockcenter" style="height: 100%;max-width: 1080px;">
-          <button class="LocaBlock"  style="width: 100%;" alt="..."></button>
+          <!-- <script type="text/javascript">
+          function SwapDivsWithClick(div1,div2)
+          {
+          d1 = document.getElementById(div1);
+          d2 = document.getElementById(div2);
+          if( d2.style.display == "none" )
+          {
+            d1.style.display = "none";
+            d2.style.display = "block";
+          }
+          else
+          {
+            d1.style.display = "block";
+            d2.style.display = "none";
+          }
+          }
+          </script> -->
+          
+          
+          
+          <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+          <script src="assets/js/fonts.js"></script>
+          <script src="assets/js/images.js"></script>
+          <script src="assets/js/kholder.js"></script>
+          
+          
+          
+          
+          <div id="lastPage" *ngIf="lastPage == true">
+            <div class="d-flex d-lg-flex align-items-md-start justify-content-lg-start align-items-lg-start" style="height: 30vh;">
+            <button class="d-lg-flex justify-content-lg-center"
+            class="narrowImg A1"
+              alt="..." style="margin-left: 1%;margin-top: 1%;height: calc(5vh + 1.5vw);"></button>
+            </div>
+            <div style="height: 45vh;">
+                <h1 class="date" style="font-family: 'Century Gothic';text-align: center;font-size: calc(100% + 3vw + 3vh);">
+                    {{eventDate}}</h1>
+                <h1 class="time" style="font-family: 'Comic Sans MS';transform: rotate(-7deg);text-align: center;font-size: calc(100% + 2vw);margin-top: calc(0.5% + 1vw + 1vh);">
+                  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {{eventTime}}</h1>
+            </div>
+            <div class="d-flex d-lg-flex justify-content-center align-items-end justify-content-lg-center align-items-lg-end" style="height: 25vh;width: 50%;">
+            <button class="narrowImg" id="More" style="width: calc(15vh + 5vw);" alt="..."></button>
+            </div>
+            <div class="container-fluid" style="margin-top: 10vh;margin-bottom: 5vh;">
+                <div class="row">
+                    <div class="col-md-6" style="color: rgb(255,255,255);width: 20%;">
+                        <div></div>
+                    </div>
+                    <div class="col-md-6" style="background: #000000;width: 80%;">
+                        <h1 style="font-family: beloved-sans;color: rgb(255,255,255);margin-top: 3%;margin-bottom: 1%;margin-left: 3%;font-size: calc(100% + 4vw);">
+                        <strong>The Waiting Place.</strong>
+                        </h1>
+                    </div>
+                </div>
+            </div>
+            <h1 style="font-family: 'Century Gothic';text-align: center;font-size: calc(40% + 2vw + 1vh);">A place some have heard of,<br>But few have found.</h1>
+            <div class="container-fluid" style="margin-top: 3%;">
+                <div class="row">
+                    <div class="col-md-6" style="color: rgb(255,255,255);width: 40%;border-bottom: 2px solid rgb(0,0,0) ;">
+                        <h1 style="font-family: beloved-sans;color: rgb(0,0,0);margin-top: 3%;margin-bottom: 1%;margin-left: 3%;text-align: right;"><strong>Rumors.</strong></h1>
+                    </div>
+                    <div class="col-md-6" style="background: rgba(255,255,255,0);width: 60%;">
+                        <div></div>
+                    </div>
+                </div>
+            </div>
+            <div class="d-flex d-lg-flex hyper" id="blockcenter" style="height: 100%;max-width: 1080px;">
+            <button class="d-lg-flex Block1" usemap="#workmap"></button><a id="blockcenter" href="https://www.dinerenblanc.com/" alt="..." target="_tab1" style="top: 22%; left: 40%; width: 17%; height: 8%;">
+            </a>
+            </div>
+            <div id="blockcenter" style="height: 100%;max-width: 1080px;">
+            <button class="Block2" style="width: 100%;" alt="..."></button>
+            </div>
+            <div id="blockcenter" class="hyper" style="height: 100%;max-width: 1080px;">
+            <button class="Block3"  style="width: 100%;"></button>
+            <a id="blockcenter" href="#" target="_tab2" style="top: 17%; left: 48%; width: 22%; height: 11%;"></a>
+            </div>
+            <div id="blockcenter" class="hyper" style="height: 100%;max-width: 1080px;">
+            <button class="Block4"  style="width: 100%;"></button>
+            </div>
+            <div class="container-fluid" style="margin-top: 2%;" alt="...">
+                <div class="row">
+                    <div class="col-md-6" style="background: rgba(255,255,255,0);width: 60%;">
+                        <div></div>
+                    </div>
+                    <div class="col-md-6" style="color: rgb(255,255,255);width: 40%;border-bottom: 2px solid rgb(0,0,0) ;">
+                        <h1 style="font-family: beloved-sans;color: rgb(0,0,0);margin-top: 3%;margin-bottom: 1%;margin-left: 3%;text-align: left;"><strong>Guests.</strong></h1>
+                    </div>
+                </div>
+            </div>
+            <div id="blockcenter" style="height: 100%;max-width: 1080px;">
+            <button class="GuestBlock"  style="width: 100%;" alt="..."></button>
+            </div>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-9 col-sm-8 col-md-7" style="color: rgb(255,255,255);border-bottom: 2px solid rgb(0,0,0);">
+                        <h1 style="font-family: beloved-sans;color: rgb(0,0,0);margin-top: 3%;margin-bottom: 1%;margin-left: 3%;text-align: right;"><strong>Skin In The Game.</strong></h1>
+                    </div>
+                    <div class="col" style="background: rgba(255,255,255,0);">
+                        <div></div>
+                    </div>
+                </div>
+            </div>
+            <div id="blockcenter" style="height: 100%;max-width: 1080px;">
+            <button class="SkinBlock"  style="width: 100%;" alt="..."></button>
+                <div style="margin-left: 9%;">
+                    <p style="font-family: 'Comic Sans MS';font-size: min(2.5vw, 30px);">Need help covering the fee?<br><a href="{{payLink}}" style="color: rgb(0,0,0);font-family: 'Comic Sans MS';">Let us know.</a><br>And.<br>If you walk away from the evening,<br>Less than delighted,<br>We'll give you your money back.</p>
+                </div>
+            </div>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-6" style="background: rgba(255,255,255,0);width: 30%;">
+                        <div></div>
+                    </div>
+                    <div class="col-md-6" style="color: rgb(255,255,255);width: 70%;border-bottom: 2px solid rgb(0,0,0);">
+                        <h1 style="font-family: beloved-sans;color: rgb(0,0,0);margin-top: 3%;margin-bottom: 1%;margin-left: 3%;text-align: left;"><strong>The Organizers.</strong></h1>
+                    </div>
+                </div>
+            </div>
+            <div id="blockcenter" style="height: 100%;max-width: 1080px;">
+            <button class="OrgBlok"  style="width: 100%;margin-bottom: -7.5%;" alt="..."></button>
+            </div>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-6" style="color: rgb(255,255,255);width: 40%;border-bottom: 2px solid rgb(0,0,0) ;">
+                        <h1 style="font-family: beloved-sans;color: rgb(0,0,0);margin-top: 3%;margin-bottom: 1%;margin-left: 3%;text-align: right;"><strong>Location.</strong></h1>
+                    </div>
+                    <div class="col-md-6" style="background: rgba(255,255,255,0);width: 60%;">
+                        <div></div>
+                    </div>
+                </div>
+            </div>
+            <div id="blockcenter" style="height: 100%;max-width: 1080px;">
+            <button class="LocaBlock"  style="width: 100%;" alt="..."></button>
+            </div>
+            <div class="container-fluid" style="margin-top: -3%;">
+                <div class="row">
+                    <div class="col-md-6" style="background: rgba(255,255,255,0);width: 20%;">
+                        <div></div>
+                    </div>
+                    <div class="col-md-6" style="color: rgb(255,255,255);width: 80%;border-bottom: 2px solid rgb(0,0,0);">
+                        <h1 style="font-family: beloved-sans;color: rgb(0,0,0);margin-top: 3%;margin-bottom: 1%;margin-left: 3%;text-align: right;"><br></h1>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <h1 style="font-family: 'Comic Sans MS';font-size: calc(30% + 1vh + 1vw);text-align: center;line-height: 160%;"><br><br>You have more questions.<br>You want more details.<br>Answers will come.<br>Before you travel.<br>Before you pay your stake.<br><br>But.<br>For Now.<br>We have shared all we can.<br>to tell you more.<br>we must be certain.<br>the keys are in the right hands.</h1>
+            </div>
+            <div class="container-fluid" style="margin-top: calc(10% + 1vw + 1vh);">
+                <div class="row">
+                    <div class="col-md-6" style="background: #000000;width: 50%;">
+                        <h1 style="font-family: beloved-sans;color: rgb(255,255,255);margin-top: 3%;margin-bottom: 1%;margin-left: 3%;text-align: right;"><strong>Next Step.</strong></h1>
+                    </div>
+                    <div class="col-md-6" style="color: rgb(255,255,255);width: 50%;">
+                        <div></div>
+                    </div>
+                </div>
+            </div>
+            <div class="d-flex justify-content-center align-items-center" id="blockcenter" style="height: 100%;max-width: 1080px;">
+            <button class="NextBlock" style="width: 90%;"  alt="..."></button>
+            </div>
+          
+            <div class="d-flex d-lg-flex justify-content-end justify-content-lg-end" id="floater">
+            <a href="{{guestButtonLink}}">
+                <button class="button"  style="height: calc(10vh + 4vw);"></button>
+            </a>
+            </div>
           </div>
-          <div class="container-fluid" style="margin-top: -3%;">
-              <div class="row">
-                  <div class="col-md-6" style="background: rgba(255,255,255,0);width: 20%;">
-                      <div></div>
-                  </div>
-                  <div class="col-md-6" style="color: rgb(255,255,255);width: 80%;border-bottom: 2px solid rgb(0,0,0);">
-                      <h1 style="font-family: beloved-sans;color: rgb(0,0,0);margin-top: 3%;margin-bottom: 1%;margin-left: 3%;text-align: right;"><br></h1>
-                  </div>
-              </div>
           </div>
-          <div>
-              <h1 style="font-family: 'Comic Sans MS';font-size: calc(30% + 1vh + 1vw);text-align: center;line-height: 160%;"><br><br>You have more questions.<br>You want more details.<br>Answers will come.<br>Before you travel.<br>Before you pay your stake.<br><br>But.<br>For Now.<br>We have shared all we can.<br>to tell you more.<br>we must be certain.<br>the keys are in the right hands.</h1>
-          </div>
-          <div class="container-fluid" style="margin-top: calc(10% + 1vw + 1vh);">
-              <div class="row">
-                  <div class="col-md-6" style="background: #000000;width: 50%;">
-                      <h1 style="font-family: beloved-sans;color: rgb(255,255,255);margin-top: 3%;margin-bottom: 1%;margin-left: 3%;text-align: right;"><strong>Next Step.</strong></h1>
-                  </div>
-                  <div class="col-md-6" style="color: rgb(255,255,255);width: 50%;">
-                      <div></div>
-                  </div>
-              </div>
-          </div>
-          <div class="d-flex justify-content-center align-items-center" id="blockcenter" style="height: 100%;max-width: 1080px;">
-          <button class="NextBlock" style="width: 90%;"  alt="..."></button>
-          </div>
-        
-          <div class="d-flex d-lg-flex justify-content-end justify-content-lg-end" id="floater">
-          <a href="#">
-              <button class="button"  style="height: calc(10vh + 4vw);"></button>
-          </a>
-          </div>
-        </div>
-        </div>
-
-<script>
-$("textarea").each(function () {
-this.setAttribute("style", "height:" + (this.scrollHeight) + "px;overflow-y:hidden;");
-$(this).css("background-color", "transparent");
-$(this).css("font-family", "Century Gothic");
-$(this).css("border-style", "hidden");
-$(this).css("width", "97%");
-$(this).css("border-bottom", "2px solid rgb(255,255,255)");
-
-}).on("input", function () {
-this.style.height = "auto";
-this.style.height = (this.scrollHeight) + "px";
-$(this).css("color", "rgb(255,255,255)");
-});
-</script>
+  
+  <script>
+  $("textarea").each(function () {
+  this.setAttribute("style", "height:" + (this.scrollHeight) + "px;overflow-y:hidden;");
+  $(this).css("background-color", "transparent");
+  $(this).css("font-family", "Century Gothic");
+  $(this).css("border-style", "hidden");
+  $(this).css("width", "97%");
+  $(this).css("border-bottom", "2px solid rgb(255,255,255)");
+  
+  }).on("input", function () {
+  this.style.height = "auto";
+  this.style.height = (this.scrollHeight) + "px";
+  $(this).css("color", "rgb(255,255,255)");
+  });
+  </script>
+  
+  
+  
+  

@@ -46,7 +46,7 @@
   <div *ngIf="landingPage == true" class="d-flex justify-content-end" id="footer" style="margin-top: 20%;">
     <a href="contact.html" style="margin-right: 5%;color: rgba(13,110,253,0);">
         <h1 id="help" style="font-family: 'Comic Sans MS';font-size: 1rem;text-align: right;margin-right: 5%;width: 18rem;color: rgb(0,0,0);">
-          <a href="https://www.griptape.org/contact-us" style="color: blaCK;">
+          <a href="{{helpLink}}" style="color: blaCK;">
           Help! My key isn’t working!
       </a>
       </h1>
@@ -527,7 +527,7 @@
         <div id="blockcenter" style="height: 100%;max-width: 1080px;">
         <button class="SkinBlock"  style="width: 100%;" alt="..."></button>
             <div style="margin-left: 9%;">
-                <p style="font-family: 'Comic Sans MS';font-size: min(2.5vw, 30px);">Need help covering the fee?<br><a href="#contactfrm" style="color: rgb(0,0,0);font-family: 'Comic Sans MS';">Let us know.</a><br>And.<br>If you walk away from the evening,<br>Less than delighted,<br>We'll give you your money back.</p>
+                <p style="font-family: 'Comic Sans MS';font-size: min(2.5vw, 30px);">Need help covering the fee?<br><a href="{{payLink}}" style="color: rgb(0,0,0);font-family: 'Comic Sans MS';">Let us know.</a><br>And.<br>If you walk away from the evening,<br>Less than delighted,<br>We'll give you your money back.</p>
             </div>
         </div>
         <div class="container-fluid">
@@ -584,7 +584,7 @@
         </div>
       
         <div class="d-flex d-lg-flex justify-content-end justify-content-lg-end" id="floater">
-        <a href="{{buttonLink}}">
+        <a href="{{masterButtonLink}}">
             <button class="button"  style="height: calc(10vh + 4vw);"></button>
         </a>
         </div>
@@ -1065,7 +1065,7 @@
             <div id="blockcenter" style="height: 100%;max-width: 1080px;">
             <button class="SkinBlock"  style="width: 100%;" alt="..."></button>
                 <div style="margin-left: 9%;">
-                    <p style="font-family: 'Comic Sans MS';font-size: min(2.5vw, 30px);">Need help covering the fee?<br><a href="#contactfrm" style="color: rgb(0,0,0);font-family: 'Comic Sans MS';">Let us know.</a><br>And.<br>If you walk away from the evening,<br>Less than delighted,<br>We'll give you your money back.</p>
+                    <p style="font-family: 'Comic Sans MS';font-size: min(2.5vw, 30px);">Need help covering the fee?<br><a href="{{payLink}}" style="color: rgb(0,0,0);font-family: 'Comic Sans MS';">Let us know.</a><br>And.<br>If you walk away from the evening,<br>Less than delighted,<br>We'll give you your money back.</p>
                 </div>
             </div>
             <div class="container-fluid">
@@ -1122,7 +1122,7 @@
             </div>
           
             <div class="d-flex d-lg-flex justify-content-end justify-content-lg-end" id="floater">
-            <a href="#">
+            <a href="{{guestButtonLink}}">
                 <button class="button"  style="height: calc(10vh + 4vw);"></button>
             </a>
             </div>

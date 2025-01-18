@@ -13,10 +13,13 @@ import { FormsModule } from '@angular/forms';
 export class NycComponent {
   eventDate:string ="tba";
   eventTime:string ="tba";
-  buttonLink:string = "#";
   masterCode:string = "chosen";
+  masterButtonLink:string = "https://form.jotform.com/250126328711146";
   guestCode:string = "trusted";
-   
+  guestButtonLink:string = "https://form.jotform.com/250155471104143";
+  helpLink:string = "https://form.jotform.com/250158429285159";
+  payLink:string = "https://form.jotform.com/250158429285159";
+
   landingPage:boolean = true;
   @Input() checkGuestOrMaster:string = "";
   pathSelect:string = "";

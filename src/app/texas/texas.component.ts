@@ -10,12 +10,14 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './texas.component.css'
 })
 export class TexasComponent {
-
   eventDate:string ="tba";
   eventTime:string ="tba";
-  buttonLink:string = "#";
   masterCode:string = "master";
+  masterButtonLink:string = "https://himedia.gg";
   guestCode:string = "guest";
+  guestButtonLink:string = "hhttps://himedia.gg";
+  helpLink:string = "https://himedia.gg";
+  payLink:string = "https://himedia.gg";
 
 landingPage:boolean = true;
   @Input() checkGuestOrMaster:string = "";
