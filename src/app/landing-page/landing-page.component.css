@@ -118,3 +118,9 @@
     height: 100vh;
     width:100vh;
 }
+#landingBlock{
+        background: url('https://raw.githubusercontent.com/flyaway12345/Griptape-Adventure/refs/heads/main/src/assests/landingBlock.png') center / contain no-repeat;
+        border-style: none;
+        height: 100vh;
+        width:100vh;
+}
