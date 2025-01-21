@@ -11,8 +11,8 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './nyc.component.css'
 })
 export class NycComponent {
-  eventDate:string ="tba";
-  eventTime:string ="tba";
+  eventDate:string ="February 8th";
+  eventTime:string ="3 PM";
   masterCode:string = "chosen";
   masterButtonLink:string = "https://form.jotform.com/250126328711146";
   guestCode:string = "trusted";
