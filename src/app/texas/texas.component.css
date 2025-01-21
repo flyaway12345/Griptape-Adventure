@@ -75,7 +75,7 @@
     width:100vh;
 }
 .LocaBlock {
-    background: url('https://raw.githubusercontent.com/flyaway12345/Griptape-Adventure/refs/heads/main/src/app/texas/assets/LocaBlock.png') center / contain no-repeat;
+    background: url('https://github.com/flyaway12345/Griptape-Adventure/blob/main/src/assests/LocaBlock.png') center / contain no-repeat;
     border-style: none;
     height: 100vh;
     width:100vh;
@@ -119,8 +119,8 @@
     width:100vh;
 }
 #landingBlock{
-    background: url('https://raw.githubusercontent.com/flyaway12345/Griptape-Adventure/refs/heads/main/src/assests/landingBlock.png') center / contain no-repeat;
-    border-style: none;
-    height: 50vh;
-    width:50vh;
+        background: url('https://raw.githubusercontent.com/flyaway12345/Griptape-Adventure/refs/heads/main/src/assests/landingBlock.png') center / contain no-repeat;
+        border-style: none;
+        height: 150px;
+        width:100%;
 }
