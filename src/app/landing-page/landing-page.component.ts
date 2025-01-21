@@ -28,7 +28,7 @@ constructor() {
   helpLink:string = "https://himedia.gg";
   payLink:string = "https://himedia.gg";
 
-  allowInputOnLandingPage:boolean = true;
+  allowInputOnLandingPage:boolean = false;
 
   landingPage:boolean = true;
   @Input() checkGuestOrMaster:string = "";
