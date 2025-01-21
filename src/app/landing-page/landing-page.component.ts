@@ -11,7 +11,14 @@ import { FormsModule } from '@angular/forms';
 })
 export class LandingPageComponent {
   title = 'griptape-adventure';
-  ///fix all this spegetti code later, just get the functionallity working
+  ///fix all this spegetti code later, just get the functionallity working\
+  mobHeight: any;
+  mobWidth: any;
+
+constructor() { 
+  this.mobHeight = (window.screen.height) + "px";
+  this.mobWidth = (window.screen.width) + "px";
+}
   eventDate:string ="tba";
   eventTime:string ="tba";
   masterCode:string = "master";
@@ -21,7 +28,7 @@ export class LandingPageComponent {
   helpLink:string = "https://himedia.gg";
   payLink:string = "https://himedia.gg";
 
-  allowInputOnLandingPage:boolean = false;
+  allowInputOnLandingPage:boolean = true;
 
   landingPage:boolean = true;
   @Input() checkGuestOrMaster:string = "";
@@ -42,6 +49,17 @@ export class LandingPageComponent {
   MP4L2:boolean = false;
   MP4L3:boolean = false;
   lastPage:boolean = false;
+  width:string = "100%";
+
+setWidth(){
+  if(this.mobHeight>this.mobWidth){
+    this.width = "100%"
+  }else if(this.mobHeight < this.mobWidth){
+    this.width = "10%"
+  }else{
+    this.width = "50%"
+  }
+}
 
 choosePath(){
   if(this.checkGuestOrMaster == this.masterCode){
@@ -377,5 +395,6 @@ onClicklastPage(){
   this.MP4L3 = false;
   this.lastPage = true;
 }
+
 
 }

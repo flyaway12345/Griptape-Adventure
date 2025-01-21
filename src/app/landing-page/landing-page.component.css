@@ -110,7 +110,7 @@
     background: url('https://raw.githubusercontent.com/flyaway12345/Griptape-Adventure/refs/heads/main/src/assests/button.png') center / contain no-repeat;
     border-style: none;
     height: 150px;
-    width:100%;
+    width: 50%;
 }
 #More {
     background: url('https://raw.githubusercontent.com/flyaway12345/Griptape-Adventure/refs/heads/main/src/assests/More.png') center / contain no-repeat;
