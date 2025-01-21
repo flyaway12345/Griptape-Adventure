@@ -107,7 +107,7 @@
     width:100vh;
 }
 .nextButton {
-    background: url('https://raw.githubusercontent.com/flyaway12345/Griptape-Adventure/refs/heads/main/src/assests/button.png') center / contain no-repeat;
+    background: url('https://raw.githubusercontent.com/flyaway12345/Griptape-Adventure/refs/heads/main/src/app/nyc/assets/button.png') center / contain no-repeat;
     border-style: none;
     height: 150px;
     width:10%;
