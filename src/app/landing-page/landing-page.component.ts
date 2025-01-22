@@ -12,15 +12,7 @@ import { InfoGrabService } from '../info-grab.service';
 })
 export class LandingPageComponent {
   title = 'griptape-adventure';
-//   eventID:number = 1;
-//   ///fix all this spegetti code later, just get the functionallity working\
-//   mobHeight: any;
-//   mobWidth: any;
-//   eventList: Array<any> = [];
-// constructor(private infoGrabService:InfoGrabService) { 
-//   this.mobHeight = (window.screen.height) + "px";
-//   this.mobWidth = (window.screen.width) + "px";
-// }
+  ///fix all this spegetti code later, just get the functionallity working\
   eventDate:string ="tba";
   eventTime:string ="tba";
   masterCode:string = "master";
@@ -51,17 +43,11 @@ export class LandingPageComponent {
   MP4L2:boolean = false;
   MP4L3:boolean = false;
   lastPage:boolean = false;
-//   width:string = "100%";
 
-// setWidth(){
-//   if(this.mobHeight>this.mobWidth){
-//     this.width = "100%"
-//   }else if(this.mobHeight < this.mobWidth){
-//     this.width = "10%"
-//   }else{
-//     this.width = "50%"
-//   }
-// }
+//   eventID:number = 1;
+//   eventList: Array<any> = [];
+// constructor(private infoGrabService:InfoGrabService) {}
+
 // public baseData() {
 //   this.infoGrabService.getData().subscribe(res => {
 //     this.eventList = res;
