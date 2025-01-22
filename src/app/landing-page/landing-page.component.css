@@ -16,14 +16,14 @@
     height: 100vh;
 }
 #D1 {
-    background: url('https://raw.githubusercontent.com/flyaway12345/Griptape-Adventure/refs/heads/main/src/assests/next_white.png') center / contain no-repeat;
+    background: url('https://raw.githubusercontent.com/flyaway12345/Assets/refs/heads/main/GriptapeAdventure/imgs/next_white.png') center / contain no-repeat;
     height: 6vh;
     width: 6vh;
     border-style: none;
     margin-left: 45%;
 }
 #D2 {
-    background: url('https://raw.githubusercontent.com/flyaway12345/Griptape-Adventure/refs/heads/main/src/assests/next_black.png') center / contain no-repeat;
+    background: url('https://raw.githubusercontent.com/flyaway12345/Assets/refs/heads/main/GriptapeAdventure/imgs/next_black.png') center / contain no-repeat;
     height: 6vh;
     width: 6vh;
     border-style: none;
@@ -32,68 +32,68 @@
 
 
 .A1 {
-    background: url('https://raw.githubusercontent.com/flyaway12345/Griptape-Adventure/refs/heads/main/src/assests/a1.png') center / contain no-repeat;
+    background: url('https://raw.githubusercontent.com/flyaway12345/Assets/refs/heads/main/GriptapeAdventure/imgs/a1.png') center / contain no-repeat;
     border-style: none;
     height: 6vh;
     width:6vh;
 }
 .A2 {
-    background: url('https://raw.githubusercontent.com/flyaway12345/Griptape-Adventure/refs/heads/main/src/assests/a2.png') center / contain no-repeat;
+    background: url('https://raw.githubusercontent.com/flyaway12345/Assets/refs/heads/main/GriptapeAdventure/imgs/a2.png') center / contain no-repeat;
     border-style: none;
     height: 6vh;
     width:6vh;
 }
 
 .Block1 {
-    background: url('https://raw.githubusercontent.com/flyaway12345/Griptape-Adventure/refs/heads/main/src/assests/Block1.png') center / contain no-repeat;
+    background: url('https://raw.githubusercontent.com/flyaway12345/Assets/refs/heads/main/GriptapeAdventure/imgs/Block1.png') center / contain no-repeat;
     border-style: none;
     height: 100vh;
     width:100vh;
 }
 .Block2 {
-    background: url('https://raw.githubusercontent.com/flyaway12345/Griptape-Adventure/refs/heads/main/src/assests/Block2.png') center / contain no-repeat;
+    background: url('https://raw.githubusercontent.com/flyaway12345/Assets/refs/heads/main/GriptapeAdventure/imgs/Block2.png') center / contain no-repeat;
     border-style: none;
     height: 100vh;
     width:100vh;
 }
 .Block3 {
-    background: url('https://raw.githubusercontent.com/flyaway12345/Griptape-Adventure/refs/heads/main/src/assests/Block3.png') center / contain no-repeat;
+    background: url('https://raw.githubusercontent.com/flyaway12345/Assets/refs/heads/main/GriptapeAdventure/imgs/Block3.png') center / contain no-repeat;
     border-style: none;
     height: 100vh;
     width:100vh;
 }
 .Block4 {
-    background: url('https://raw.githubusercontent.com/flyaway12345/Griptape-Adventure/refs/heads/main/src/assests/Block4.png') center / contain no-repeat;
+    background: url('https://raw.githubusercontent.com/flyaway12345/Assets/refs/heads/main/GriptapeAdventure/imgs/Block4.png') center / contain no-repeat;
     border-style: none;
     height: 100vh;
     width:100vh;
 }
 .GuestBlock {
-    background: url('https://raw.githubusercontent.com/flyaway12345/Griptape-Adventure/refs/heads/main/src/assests/GuestBlock.png') center / contain no-repeat;
+    background: url('https://raw.githubusercontent.com/flyaway12345/Assets/refs/heads/main/GriptapeAdventure/imgs/GuestBlock.png') center / contain no-repeat;
     border-style: none;
     height: 100vh;
     width:100vh;
 }
 .LocaBlock {
-    background: url('https://raw.githubusercontent.com/flyaway12345/Griptape-Adventure/refs/heads/main/src/app/nyc/assets/LocaBlock.png') center / contain no-repeat;
+    background: url('https://raw.githubusercontent.com/flyaway12345/Assets/refs/heads/main/GriptapeAdventure/imgs/LocaBlock.png') center / contain no-repeat;
     border-style: none;
     height: 100vh;
     width:100vh;
 }
 .NextBlock {
-    background: url('https://raw.githubusercontent.com/flyaway12345/Griptape-Adventure/refs/heads/main/src/assests/NextBlock.png') center / contain no-repeat;
+    background: url('https://raw.githubusercontent.com/flyaway12345/Assets/refs/heads/main/GriptapeAdventure/imgs/NextBlock.png') center / contain no-repeat;
     border-style: none;
     height: 100vh;
     width:100vh;
 }
 .OrgBlok {
-    background: url('https://raw.githubusercontent.com/flyaway12345/Griptape-Adventure/refs/heads/main/src/assests/OrgBlok.png') center / contain no-repeat;
+    background: url('https://raw.githubusercontent.com/flyaway12345/Assets/refs/heads/main/GriptapeAdventure/imgs/OrgBlok.png') center / contain no-repeat;
     border-style: none;
     height: 100vh;
     width:100vh;
 }
 .orBox {
-    background: url('https://raw.githubusercontent.com/flyaway12345/Griptape-Adventure/refs/heads/main/src/assests/OrBox.png') center / contain no-repeat;
+    background: url('https://raw.githubusercontent.com/flyaway12345/Assets/refs/heads/main/GriptapeAdventure/imgs/OrBox.png') center / contain no-repeat;
     border-style: none;
     height: 203px;
     width: calc(10% + 6vw + 2vh);
@@ -101,25 +101,25 @@
     /* display: none; */
 }
 .SkinBlock {
-    background: url('https://raw.githubusercontent.com/flyaway12345/Griptape-Adventure/refs/heads/main/src/assests/SkinBlock.png') center / contain no-repeat;
+    background: url('https://raw.githubusercontent.com/flyaway12345/Assets/refs/heads/main/GriptapeAdventure/imgs/SkinBlock.png') center / contain no-repeat;
     border-style: none;
     height: 100vh;
     width:100vh;
 }
 .nextButton {
-    background: url('https://raw.githubusercontent.com/flyaway12345/Griptape-Adventure/refs/heads/main/src/assests/button.png') center / contain no-repeat;
+    background: url('https://raw.githubusercontent.com/flyaway12345/Assets/refs/heads/main/GriptapeAdventure/imgs/button.png') center / contain no-repeat;
     border-style: none;
     height: 150px;
     width: 50%;
 }
 #More {
-    background: url('https://raw.githubusercontent.com/flyaway12345/Griptape-Adventure/refs/heads/main/src/assests/More.png') center / contain no-repeat;
+    background: url('https://raw.githubusercontent.com/flyaway12345/Assets/refs/heads/main/GriptapeAdventure/imgs/More.png') center / contain no-repeat;
     border-style: none;
     height: 100vh;
     width:100vh;
 }
 #landingBlock{
-        background: url('https://raw.githubusercontent.com/flyaway12345/Griptape-Adventure/refs/heads/main/src/assests/landingBlock.png') center / contain no-repeat;
+        background: url('https://raw.githubusercontent.com/flyaway12345/Assets/refs/heads/main/GriptapeAdventure/imgs/landingBlock.png') center / contain no-repeat;
         border-style: none;
         height: 75px;
         width:100%;
