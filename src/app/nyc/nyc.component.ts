@@ -14,9 +14,9 @@ export class NycComponent {
   eventDate:string ="February 8th";
   eventTime:string ="3 PM";
   masterCode:string = "chosen";
-  masterButtonLink:string = "https://form.jotform.com/250126328711146";
+  masterButtonLink:string = "https://airtable.com/appF47oOHE8XbXD63/pagThnQQ7i6eNjuLL/form?prefill_keyType=Master&hide_keyType=true";
   guestCode:string = "trusted";
-  guestButtonLink:string = "https://form.jotform.com/250155471104143";
+  guestButtonLink:string = "https://airtable.com/appF47oOHE8XbXD63/pag2wvvGFn9E3QreL/form?prefill_keyType=Guest&hide_keyType=true";
   helpLink:string = "https://form.jotform.com/250158429285159";
   payLink:string = "https://form.jotform.com/250158429285159";
 

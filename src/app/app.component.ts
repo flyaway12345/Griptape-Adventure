@@ -2,7 +2,6 @@ import { Component, Input } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { InfoGrabService } from './info-grab.service';
 
 @Component({
   selector: 'app-root',
@@ -13,6 +12,4 @@ import { InfoGrabService } from './info-grab.service';
 })
 export class AppComponent {
 
-ngOnInit(){
-}
 }

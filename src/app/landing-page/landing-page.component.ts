@@ -1,26 +1,52 @@
 import { CommonModule } from '@angular/common';
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { InfoGrabService } from '../info-grab.service';
+import { InfoGrabService } from './info-grab.service';
 
 @Component({
   selector: 'app-landing-page',
   standalone: true,
-  imports: [CommonModule, FormsModule],
+  imports: [
+    FormsModule,
+    CommonModule
+],
   templateUrl: './landing-page.component.html',
   styleUrl: './landing-page.component.css'
 })
-export class LandingPageComponent {
+export class LandingPageComponent{
   title = 'griptape-adventure';
-  ///fix all this spegetti code later, just get the functionallity working\
-  eventDate:string ="tba";
-  eventTime:string ="tba";
-  masterCode:string = "master";
-  masterButtonLink:string = "https://himedia.gg";
-  guestCode:string = "guest";
-  guestButtonLink:string = "https://himedia.gg";
-  helpLink:string = "https://himedia.gg";
-  payLink:string = "https://himedia.gg";
+
+
+// constructor(private infoGrabService:InfoGrabService) {}
+// eventList: Array<any> = [];
+// eventID:number = 1;
+// public baseData() {
+//   this.infoGrabService.getData().subscribe(res => {
+//     this.eventList = res;
+//     console.log("data aquired");
+//   });
+// }
+
+
+//   ///fix all this spegetti code later, just get the functionallity working\
+//   eventDate:string = this.eventList[1].eventTime;
+//   eventTime:string =this.eventList[1].eventTime;
+//   masterCode:string = this.eventList[1].masterCode;
+//   masterButtonLink:string = this.eventList[1].masterButtonLink;
+//   guestCode:string = this.eventList[1].guestCode;
+//   guestButtonLink:string = this.eventList[1].guestButtonLink;
+//   helpLink:string = this.eventList[1].helpLink;
+//   payLink:string = this.eventList[1].payLink;
+
+
+eventDate:string ="tba";
+eventTime:string ="tba";
+masterCode:string = "master";
+masterButtonLink:string = "https://himedia.gg";
+guestCode:string = "guest";
+guestButtonLink:string = "https://himedia.gg";
+helpLink:string = "https://himedia.gg";
+payLink:string = "https://himedia.gg";
 
   allowInputOnLandingPage:boolean = false;
 
@@ -44,16 +70,7 @@ export class LandingPageComponent {
   MP4L3:boolean = false;
   lastPage:boolean = false;
 
-//   eventID:number = 1;
-//   eventList: Array<any> = [];
-// constructor(private infoGrabService:InfoGrabService) {}
 
-// public baseData() {
-//   this.infoGrabService.getData().subscribe(res => {
-//     this.eventList = res;
-//     console.log("data aquired");
-//   });
-// }
 choosePath(){
   if(this.checkGuestOrMaster == this.masterCode){
     this.pathSelect = "M";
