@@ -11,7 +11,7 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './nyc.component.css'
 })
 export class NycComponent {
-  eventDate:string ="February 8th";
+  eventDate:string ="February 15th";
   eventTime:string ="3 PM";
   masterCode:string = "chosen";
   masterButtonLink:string = "https://airtable.com/appF47oOHE8XbXD63/pagThnQQ7i6eNjuLL/form?prefill_keyType=Master&hide_keyType=true";
